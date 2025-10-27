@@ -13,7 +13,7 @@ Office Pro est une plateforme de formation en ligne dédiée à la maîtrise des
 - Professionnels en reconversion ou souhaitant améliorer leurs compétences.
 - Étudiants préparant leur insertion professionnelle.
 - Entrepreneurs et indépendants utilisant Office au quotidien.
-- Âge : 18-50 ans, niveau intermédiaire à avancé.
+- Âge : 16-50 ans, niveau intermédiaire à avancé.
 
 ## 4. Fonctionnalités Requises
 ### 4.1 Page d'Accueil
