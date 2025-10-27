@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Office Pro - Formation en Ligne</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo"><img src="TE.png" alt="Tech Exchange Logo"></a>
+        <nav>
+            <div class="dropdown">
+                <a href="#programme">Programme</a>
+                <div class="dropdown-content">
+                    <a href="excel.html">Excel</a>
+                    <a href="word.html">Word</a>
+                    <a href="powerpoint.html">PowerPoint</a>
+                </div>
+            </div>
+            <a href="#temoignages">Témoignages</a>
+            <a href="pricing.html">Prix</a>
+        </nav>
+        <div class="header-actions">
+            <button id="theme-toggle" class="theme-toggle" aria-label="Basculer le mode sombre/clair">
+                <span class="toggle-slider"></span>
+            </button>
+            <a href="pricing.html" class="cta-button">Essayer maintenant</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Maîtrisez ses outils et
+            <br>Redynamisez votre vie professionnel.</h1>
+        <p>Formations complètes pour maîtriser Word, Excel et PowerPoint. Boostez votre carrière dès aujourd'hui.</p>
+        <a href="pricing.html" class="cta-button">Commencer Maintenant</a>
+    </section>
+
+    <section class="features" id="programme">
+        <h2>Ce que vous apprendrez</h2>
+        <div class="feature-cards">
+            <a href="word.html" class="card-link fade-in">
+                <div class="card word">
+                    <h3>Word</h3>
+                    <p>Créez des documents professionnels avec mise en page avancée, styles et automatisation.</p>
+                </div>
+            </a>
+            <a href="excel.html" class="card-link fade-in" style="transition-delay: 100ms;">
+                <div class="card excel">
+                    <h3>Excel</h3>
+                    <p>Maîtrisez les formules, tableaux croisés dynamiques et analyses de données pour devenir un expert en tableur.</p>
+                </div>
+            </a>
+            <a href="powerpoint.html" class="card-link fade-in" style="transition-delay: 200ms;">
+                <div class="card powerpoint">
+                    <h3>PowerPoint</h3>
+                    <p>Concevez des présentations impactantes avec animations, graphiques et storytelling efficace.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section class="testimonials" id="temoignages">
+        <h2>Ce que disent nos étudiants</h2>
+        <div class="testimonial-slider-container">
+            <div class="testimonial-cards fade-in">
+                <div class="testimonial-card">
+                    <p>"Cette formation a complètement changé ma façon de travailler avec Excel. Je suis beaucoup plus rapide et efficace."</p>
+                    <div class="author">- MAKITA Jeff, Génie informatique</div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Clair, concis et très pratique. Les exemples sont pertinents et faciles à appliquer. Je recommande vivement !"</p>
+                    <div class="author">- E. Warren, Coder/Designer</div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"J'avais des bases sur PowerPoint, mais ce cours m'a ouvert les yeux sur des fonctionnalités avancées que j'ignorais."</p>
+                    <div class="author">- Hugo Santiago, Étudiant modèle</div>
+                </div>
+            </div>
+            <button class="slider-btn prev" aria-label="Témoignage précédent"><</button>
+            <button class="slider-btn next" aria-label="Témoignage suivant">></button>
+        </div>
+    </section>
+
+
+    <section class="pricing fade-in" id="prix">
+        <h2>Prix Unique</h2>
+        <div class="price">4.900 Fcfa</div>
+        <p>Accès illimité à vie à tous les modules et mises à jour.</p>
+        <a href="pricing.html" class="cta-button">Commencer Maintenant</a>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Tech Exchange</div>
+            <p>&copy; 2025 - Tous droits réservés</p>
+            <a href="mailto:techexchange50@gmail.com">techexchange50@gmail.com</a>
+            <p class="credits">Conçu par des étudiants de l'INPTIC Gabon</p>
+        </div>
+    </footer>
+
+
+    <!-- 
+      Espace pour le script d'analyse d'audience (par exemple, Google Analytics).
+      Vous obtiendrez ce script en créant une propriété sur le site de Google Analytics.
+      Il est généralement recommandé de le placer juste avant la fermeture de la balise </body>.
+    -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=VOTRE_ID_DE_SUIVI"></script> -->
+
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') {
+            body.classList.add('light-mode');
+            themeToggle.classList.add('active');
+        }
+
+        // Toggle theme
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+            themeToggle.classList.toggle('active');
+            const currentTheme = body.classList.contains('light-mode') ? 'light' : 'dark';
+            localStorage.setItem('theme', currentTheme);
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // --- Animation au défilement (Fade-in on scroll) ---
+            const sectionsToAnimate = document.querySelectorAll('.fade-in');
+
+            if (sectionsToAnimate.length > 0) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-visible');
+                            // Optionnel: arrêter d'observer une fois l'animation jouée
+                            // observer.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.1 // L'animation se déclenche quand 10% de l'élément est visible
+                });
+
+                sectionsToAnimate.forEach(section => {
+                    observer.observe(section);
+                });
+            }
+
+            // --- Défilement fluide pour les ancres ---
+            // Note: `scroll-behavior: smooth;` en CSS gère déjà cela pour la plupart des navigateurs modernes.
+            // Ce script est une surcoupe pour une compatibilité maximale et un contrôle plus fin si besoin.
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    // Le défilement est déjà géré par le CSS, ce script est une sécurité.
+                });
+            });
+
+            // --- Carrousel de témoignages ---
+            const sliderContainer = document.querySelector('.testimonial-slider-container');
+            if (sliderContainer) {
+                const slider = sliderContainer.querySelector('.testimonial-cards');
+                const prevBtn = sliderContainer.querySelector('.prev');
+                const nextBtn = sliderContainer.querySelector('.next');
+                const cards = slider.querySelectorAll('.testimonial-card');
+
+                let currentIndex = 0;
+                const cardWidth = cards[0].offsetWidth + 32; // 32px for gap
+                const visibleCards = Math.floor(sliderContainer.offsetWidth / cardWidth);
+                const maxIndex = cards.length - visibleCards;
+
+                function updateSlider() {
+                    slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+                    prevBtn.disabled = currentIndex === 0;
+                    nextBtn.disabled = currentIndex >= maxIndex;
+                }
+
+                nextBtn.addEventListener('click', () => {
+                    if (currentIndex < maxIndex) {
+                        currentIndex++;
+                        updateSlider();
+                    }
+                });
+
+                prevBtn.addEventListener('click', () => {
+                    if (currentIndex > 0) {
+                        currentIndex--;
+                        updateSlider();
+                    }
+                });
+
+                // Initial state
+                updateSlider();
+                window.addEventListener('resize', updateSlider); // Recalculate on resize
+            }
+        });
+    </script>
+</body>
+</html>
