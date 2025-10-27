@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formation PowerPoint - Office Pro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="office-pro.html" class="logo"><img src="TE.png" alt="Tech Exchange Logo"></a>
+        <nav>
+            <div class="dropdown">
+                <a href="#programme">Programme</a>
+                <div class="dropdown-content">
+                    <a href="excel.html">Excel</a>
+                    <a href="word.html">Word</a>
+                    <a href="powerpoint.html">PowerPoint</a>
+                </div>
+            </div>
+            <a href="#temoignages">Témoignages</a>
+            <a href="pricing.html">Prix</a>
+        </nav>
+        <div class="header-actions">
+            <button id="theme-toggle" class="theme-toggle" aria-label="Basculer le mode sombre/clair">
+                <span class="toggle-slider"></span>
+            </button>
+            <a href="pricing.html" class="cta-button">Essayer maintenant</a>
+        </div>
+    </header>
+
+    <div class="course-page-body">
+        <div class="course-container">
+            <h1>Formation Microsoft PowerPoint - Niveau Intermédiaire</h1>
+            <p>Vous êtes sur le point de télécharger le pack complet de la formation PowerPoint. Le fichier est compressé et protégé par un mot de passe.</p>
+
+            <a href="FORMATION POWERPOINT - Intermédiaire by TECH EXCHANGE.zip" class="download-link" download>
+                Cliquez ici pour télécharger le fichier ZIP de la formation
+            </a>
+
+            <p>Pour obtenir le mot de passe, veuillez effectuer le paiement en me contactant directement sur WhatsApp.</p>
+
+            <a href="https://wa.me/24107171432?text=Bonjour,%20je%20souhaite%20acheter%20la%20formation%20PowerPoint%20(Intermédiaire)%20et%20obtenir%20le%20mot%20de%20passe." class="whatsapp-button" target="_blank">
+                Payer et obtenir le mot de passe via WhatsApp
+            </a>
+
+            <a href="office-pro.html" class="home-link">Retour à l'accueil</a>
+        </div>
+    </div>
+
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') {
+            body.classList.add('light-mode');
+            themeToggle.classList.add('active');
+        }
+
+        // Toggle theme
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+            themeToggle.classList.toggle('active');
+            const currentTheme = body.classList.contains('light-mode') ? 'light' : 'dark';
+            localStorage.setItem('theme', currentTheme);
+        });
+    </script>
+</body>
+</html>
