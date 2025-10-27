@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarification - Office Pro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="office-pro.html" class="logo"><img src="TE.png" alt="Tech Exchange Logo"></a>
+        <nav>
+            <div class="dropdown">
+                <a href="#programme">Programme</a>
+                <div class="dropdown-content">
+                    <a href="excel.html">Excel</a>
+                    <a href="word.html">Word</a>
+                    <a href="powerpoint.html">PowerPoint</a>
+                </div>
+            </div>
+            <a href="#temoignages">Témoignages</a>
+            <a href="pricing.html">Prix</a>
+        </nav>
+        <div class="header-actions">
+            <button id="theme-toggle" class="theme-toggle" aria-label="Basculer le mode sombre/clair">
+                <span class="toggle-slider"></span>
+            </button>
+            <a href="pricing.html" class="cta-button">Essayer maintenant</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Boostez vos compétences dès aujourd'hui</h1>
+    </section>
+
+    <section class="pricing-cards fade-in">
+        <div class="pricing-container">
+            <div class="pricing-card">
+                <h3>Formation Unique</h3>
+                <div class="price">4.900 Fcfa</div>
+                <p>Accès à une formation complète.</p>
+                <ul>
+                    <li><span class="check">✓</span> Module complet sur l'outil</li>
+                    <li><span class="check">✓</span> Exercices pratiques</li>
+                    <li><span class="check">✓</span> Support via WhatsApp</li>
+                </ul>
+                <a href="https://wa.me/24107171432?text=Bonjour,%20je%20souhaite%20acheter%20la%20formation%20unique%20(4900fcfa)." class="whatsapp-button">Commencer sur WhatsApp</a>
+            </div>
+            <div class="pricing-card">
+                <h3>Pack de Deux Formations</h3>
+                <div class="price">9.000 Fcfa</div>
+                <p>Accès à deux formations complètes.</p>
+                <ul>
+                    <li><span class="check">✓</span> Deux modules complets</li>
+                    <li><span class="check">✓</span> Exercices pratiques avancés</li>
+                    <li><span class="check">✓</span> Support prioritaire</li>
+                    <li><span class="check">✓</span> Mises à jour incluses</li>
+                </ul>
+                <a href="https://wa.me/24107171432?text=Bonjour,%20je%20souhaite%20acheter%20le%20pack%20de%20deux%20formations%20(9000fcfa)." class="whatsapp-button">Commencer sur WhatsApp</a>
+            </div>
+            <div class="pricing-card">
+                <h3>Pack Complet</h3>
+                <div class="price">13.000 Fcfa</div>
+                <p>Accès à toutes les formations.</p>
+                <ul>
+                    <li><span class="check">✓</span> Tous les modules (Excel, Word, PowerPoint)</li>
+                    <li><span class="check">✓</span> Exercices complets</li>
+                    <li><span class="check">✓</span> Support illimité</li>
+                    <li><span class="check">✓</span> Mises à jour à vie</li>
+                    <li><span class="check">✓</span> Certificat de compétence</li>
+                </ul>
+                <a href="https://wa.me/24107171432?text=Bonjour,%20je%20souhaite%20acheter%20le%20pack%20complet%20(13000fcfa)." class="whatsapp-button">Commencer sur WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Tech Exchange</div>
+            <p>&copy; 2025 - Tous droits réservés</p>
+            <a href="mailto:techexchange50@gmail.com">techexchange50@gmail.com</a>
+            <p class="credits">Conçu par des étudiants de l'INPTIC Gabon</p>
+        </div>
+    </footer>
+
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') {
+            body.classList.add('light-mode');
+            themeToggle.classList.add('active');
+        }
+
+        // Toggle theme
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+            themeToggle.classList.toggle('active');
+            const currentTheme = body.classList.contains('light-mode') ? 'light' : 'dark';
+            localStorage.setItem('theme', currentTheme);
+        });
+
+        // Fade-in animation
+        const sectionsToAnimate = document.querySelectorAll('.fade-in');
+        if (sectionsToAnimate.length > 0) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            sectionsToAnimate.forEach(section => observer.observe(section));
+        }
+    </script>
+</body>
+</html>
