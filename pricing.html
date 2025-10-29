@@ -11,18 +11,45 @@
 </head>
 <body>
     <header>
-        <a href="office-pro.html" class="logo"><img src="TE.png" alt="Tech Exchange Logo"></a>
+        <a href="index.html" class="logo"><img src="TE.png" alt="Tech Exchange Logo"></a>
         <nav>
             <div class="dropdown">
-                <a href="#programme">Programme</a>
+                <a href="#programme" class="nav-link">
+                    Formation
+                </a>
                 <div class="dropdown-content">
-                    <a href="excel.html">Excel</a>
-                    <a href="word.html">Word</a>
-                    <a href="powerpoint.html">PowerPoint</a>
+                    <a href="word.html" class="dropdown-item">
+                        <div>
+                            <strong>Word</strong>
+                            <span class="popularity">★★★★★ (4.9)</span>
+                        </div>
+                    </a>
+                    <a href="excel.html" class="dropdown-item">
+                        <div>
+                            <strong>Excel</strong>
+                            <span class="popularity">★★★★★ (4.8)</span>
+                        </div>
+                    </a>
+                    <a href="powerpoint.html" class="dropdown-item">
+                        <div>
+                            <strong>PowerPoint</strong>
+                            <span class="popularity">★★★★☆ (4.7)</span>
+                        </div>
+                    </a>
                 </div>
             </div>
-            <a href="#temoignages">Témoignages</a>
-            <a href="pricing.html">Prix</a>
+            <a href="#temoignages" class="nav-link">
+                Témoignages
+            </a>
+            <a href="pricing.html" class="nav-link">
+                Prix
+            </a>
+            <a href="faq.html" class="nav-link">
+                FAQs
+            </a>
+            <a href="contact.html" class="nav-link">
+                Contact
+            </a>
         </nav>
         <div class="header-actions">
             <button id="theme-toggle" class="theme-toggle" aria-label="Basculer le mode sombre/clair">
@@ -30,6 +57,11 @@
             </button>
             <a href="pricing.html" class="cta-button">Essayer maintenant</a>
         </div>
+        <button class="mobile-menu-toggle" aria-label="Menu mobile">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
     </header>
 
     <section class="hero">
@@ -87,18 +119,18 @@
     </footer>
 
     <script>
-        // Theme toggle functionality
+        // Fonctionnalité de basculement du thème
         const themeToggle = document.getElementById('theme-toggle');
         const body = document.body;
 
-        // Load saved theme
+        // Charger le thème sauvegardé
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme === 'light') {
             body.classList.add('light-mode');
             themeToggle.classList.add('active');
         }
 
-        // Toggle theme
+        // Basculer le thème
         themeToggle.addEventListener('click', () => {
             body.classList.toggle('light-mode');
             themeToggle.classList.toggle('active');
@@ -106,7 +138,7 @@
             localStorage.setItem('theme', currentTheme);
         });
 
-        // Fade-in animation
+        // Animation d'apparition progressive
         const sectionsToAnimate = document.querySelectorAll('.fade-in');
         if (sectionsToAnimate.length > 0) {
             const observer = new IntersectionObserver((entries) => {
@@ -117,6 +149,25 @@
                 });
             }, { threshold: 0.1 });
             sectionsToAnimate.forEach(section => observer.observe(section));
+        }
+
+        // --- Mobile Menu Toggle ---
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const nav = document.querySelector('nav');
+
+        if (mobileMenuToggle && nav) {
+            mobileMenuToggle.addEventListener('click', () => {
+                mobileMenuToggle.classList.toggle('active');
+                nav.classList.toggle('active');
+            });
+
+            // Fermer le menu au clic sur un lien
+            nav.addEventListener('click', (e) => {
+                if (e.target.tagName === 'A') {
+                    mobileMenuToggle.classList.remove('active');
+                    nav.classList.remove('active');
+                }
+            });
         }
     </script>
 </body>

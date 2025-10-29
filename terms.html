@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentions Légales - Office Pro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo"><img src="TE.png" alt="Tech Exchange Logo"></a>
+        <nav>
+            <div class="dropdown">
+                <a href="#programme">Programme</a>
+                <div class="dropdown-content">
+                    <a href="excel.html">Excel</a>
+                    <a href="word.html">Word</a>
+                    <a href="powerpoint.html">PowerPoint</a>
+                </div>
+            </div>
+            <a href="#temoignages">Témoignages</a>
+            <a href="pricing.html">Prix</a>
+            <a href="faq.html">FAQs</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="header-actions">
+            <button id="theme-toggle" class="theme-toggle" aria-label="Basculer le mode sombre/clair">
+                <span class="toggle-slider"></span>
+            </button>
+            <a href="pricing.html" class="cta-button">Essayer maintenant</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Mentions Légales</h1>
+        <p>Informations légales sur Office Pro</p>
+    </section>
+
+    <section class="terms-section fade-in">
+        <div class="course-container">
+            <h2>1. Éditeur du Site</h2>
+            <p><strong>Tech Exchange</strong><br>
+            Email : <a href="mailto:techexchange50@gmail.com">techexchange50@gmail.com</a><br>
+            WhatsApp : <a href="https://wa.me/24107171432">+241 07 17 14 32</a><br>
+            Adresse : Libreville, Gabon</p>
+
+            <h2>2. Hébergement</h2>
+            <p>Le site est hébergé par Netlify Inc.<br>
+            Adresse : 2325 3rd Street, Suite 215, San Francisco, CA 94107, États-Unis</p>
+
+            <h2>3. Propriété Intellectuelle</h2>
+            <p>Le contenu de ce site (textes, images, vidéos, logos) est protégé par le droit d'auteur. Toute reproduction ou utilisation sans autorisation préalable est interdite.</p>
+
+            <h2>4. Données Personnelles</h2>
+            <p>Conformément au RGPD, consultez notre <a href="privacy-policy.html">Politique de Confidentialité</a> pour en savoir plus sur la gestion de vos données.</p>
+
+            <h2>5. Cookies</h2>
+            <p>Ce site utilise des cookies pour améliorer votre expérience. En naviguant sur ce site, vous acceptez leur utilisation.</p>
+
+            <h2>6. Responsabilité</h2>
+            <p>Nous nous efforçons de fournir des informations exactes et à jour. Cependant, nous ne pouvons garantir l'absence d'erreurs. L'utilisation des informations de ce site se fait sous votre propre responsabilité.</p>
+
+            <h2>7. Liens Externes</h2>
+            <p>Ce site peut contenir des liens vers des sites externes. Nous ne sommes pas responsables du contenu de ces sites.</p>
+
+            <h2>8. Droit Applicable</h2>
+            <p>Ces mentions légales sont régies par le droit gabonais. En cas de litige, les tribunaux gabonais seront compétents.</p>
+
+            <h2>9. Contact</h2>
+            <p>Pour toute question concernant ces mentions légales, contactez-nous à : <a href="mailto:techexchange50@gmail.com">techexchange50@gmail.com</a></p>
+
+            <p><em>Dernière mise à jour : Décembre 2024</em></p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Tech Exchange</div>
+            <p>&copy; 2025 - Tous droits réservés</p>
+            <a href="mailto:techexchange50@gmail.com">techexchange50@gmail.com</a>
+            <p class="credits">Conçu par des étudiants de l'INPTIC Gabon</p>
+        </div>
+    </footer>
+
+    <script>
+        // Fonctionnalité de basculement du thème
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        // Charger le thème sauvegardé
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') {
+            body.classList.add('light-mode');
+            themeToggle.classList.add('active');
+        }
+
+        // Basculer le thème
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+            themeToggle.classList.toggle('active');
+            const currentTheme = body.classList.contains('light-mode') ? 'light' : 'dark';
+            localStorage.setItem('theme', currentTheme);
+        });
+
+        // Animation d'apparition progressive
+        const sectionsToAnimate = document.querySelectorAll('.fade-in');
+        if (sectionsToAnimate.length > 0) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            sectionsToAnimate.forEach(section => observer.observe(section));
+        }
+    </script>
+</body>
+</html>

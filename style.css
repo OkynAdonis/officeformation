@@ -1,7 +1,6 @@
 /* ==========================================================================
    Global & Homepage Styles
    ========================================================================== */
-
 :root {
     --primary-color: #a88bff; /* Violet accent */
     --background-color: #0D0D0D; /* Near black */
@@ -51,6 +50,33 @@ header {
     top: 0;
     z-index: 100;
     backdrop-filter: blur(10px);
+}
+
+body.light-mode header {
+    background-color: rgba(255, 255, 255, 0.9); /* Light semi-transparent background for light mode */
+    border-bottom: 1px solid var(--border-color);
+}
+
+body.light-mode nav a {
+    color: var(--text-secondary);
+}
+
+body.light-mode nav a:hover {
+    color: var(--primary-color);
+}
+
+body.light-mode .dropdown-content {
+    background-color: var(--card-background);
+    border-color: var(--border-color);
+}
+
+body.light-mode .dropdown-content a {
+    color: var(--text-secondary);
+}
+
+body.light-mode .dropdown-content a:hover {
+    background-color: var(--primary-color);
+    color: #0D0D0D;
 }
 
 .logo {
@@ -195,7 +221,18 @@ nav a:hover {
 
 .card:hover {
     transform: translateY(-5px);
-    border-color: var(--primary-color);
+}
+
+.card.excel:hover {
+    border-color: #107C41;
+}
+
+.card.word:hover {
+    border-color: #2B579A;
+}
+
+.card.powerpoint:hover {
+    border-color: #D24726;
 }
 
 .card.excel {
@@ -215,6 +252,43 @@ nav a:hover {
     height: auto;
     border-radius: 0.5rem;
     margin-bottom: 1rem;
+    position: relative;
+}
+
+.card.excel:hover .card img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(16, 124, 65, 0.3); /* Green overlay with opacity */
+    border-radius: 0.5rem;
+    pointer-events: none;
+}
+
+.card.word:hover .card img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(43, 87, 154, 0.3); /* Blue overlay with opacity */
+    border-radius: 0.5rem;
+    pointer-events: none;
+}
+
+.card.powerpoint:hover .card img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(210, 71, 38, 0.3); /* Orange overlay with opacity */
+    border-radius: 0.5rem;
+    pointer-events: none;
 }
 
 .card h3 {
@@ -349,32 +423,115 @@ nav a:hover {
 footer {
     border-top: 1px solid var(--border-color);
     padding: 4rem 5% 2rem;
-    text-align: center;
     margin-top: 5rem;
+    background-color: var(--background-color);
 }
 
 .footer-content {
-    max-width: 800px;
-    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+}
+
+.footer-section {
+    text-align: left;
+}
+
+.footer-section h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: var(--primary-color);
 }
 
 .footer-logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--text-color);
+    display: flex;
+    align-items: center;
     margin-bottom: 1rem;
 }
 
-footer p, footer a {
-    color: var(--text-secondary);
-    text-decoration: none;
-    margin: 0.5rem 0;
+.footer-logo img {
+    height: 40px;
+    width: auto;
+    margin-right: 0.75rem;
+    border-radius: 6px;
 }
 
-footer .credits {
-    font-style: italic;
+.footer-logo h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.footer-section p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--border-color);
+    padding-top: 2rem;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-bottom p {
+    color: var(--text-secondary);
+    margin: 0.5rem 0;
     font-size: 0.9rem;
-    margin-top: 2rem;
+}
+
+.footer-bottom .credits {
+    font-style: italic;
+    font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+
+    .footer-logo {
+        justify-content: center;
+    }
+
+    footer {
+        padding: 3rem 5% 1rem;
+    }
 }
 
 /* Styles pour les animations au défilement */
@@ -416,11 +573,41 @@ footer .credits {
     }
 
     header {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    /* Mobile responsiveness for cards: set border colors permanently since hover doesn't work on touch */
+    .card.excel {
+        border-color: #107C41;
+    }
+
+    .card.word {
+        border-color: #2B579A;
+    }
+
+    .card.powerpoint {
+        border-color: #D24726;
+    }
+
+    /* Remove hover effects on mobile */
+    .card:hover {
+        transform: none;
+    }
+
+    .card.excel:hover,
+    .card.word:hover,
+    .card.powerpoint:hover {
+        border-color: inherit;
+    }
+
+    .card.excel:hover .card img::after,
+    .card.word:hover .card img::after,
+    .card.powerpoint:hover .card img::after {
+        display: none;
     }
 }
-
 /* ==========================================================================
    Pricing Page Styles
    ========================================================================== */
@@ -636,4 +823,483 @@ body.light-mode .pricing-card .price {
     color: var(--primary-color);
     text-decoration: none;
     font-weight: 500;
+}
+
+/* ==========================================================================
+   Privacy Policy & Terms Pages Styles
+   ========================================================================== */
+
+.privacy-section, .terms-section {
+    padding: 2rem 5%;
+    text-align: left;
+}
+
+.privacy-section h2, .terms-section h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.privacy-section p, .terms-section p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.privacy-section ul, .terms-section ul {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.privacy-section li, .terms-section li {
+    margin-bottom: 0.5rem;
+}
+
+.privacy-section a, .terms-section a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.privacy-section a:hover, .terms-section a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   FAQ Page Styles
+   ========================================================================== */
+
+.faq-section {
+    padding: 5rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.faq-item {
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 4px 20px var(--shadow);
+}
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: rgba(168, 139, 255, 0.1);
+}
+
+.faq-icon {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.faq-question h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-color);
+    flex-grow: 1;
+}
+
+.faq-toggle {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    padding: 0 1.5rem 1.5rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.faq-answer p {
+    margin: 0;
+}
+
+/* ==========================================================================
+   Contact Page Styles
+   ========================================================================== */
+
+.contact-section {
+    padding: 5rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.contact-info h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: var(--card-background);
+    border-radius: 0.75rem;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px var(--shadow);
+}
+
+.contact-icon {
+    font-size: 2rem;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.contact-item strong {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.contact-item a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #beadff;
+}
+
+.response-time {
+    font-style: italic;
+    color: var(--text-secondary);
+    margin-top: 1rem;
+}
+
+.contact-form h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(168, 139, 255, 0.1);
+}
+
+.form-group input.error,
+.form-group textarea.error {
+    border-color: #ff6b6b;
+}
+
+.error-message {
+    display: block;
+    margin-top: 0.5rem;
+    color: #ff6b6b;
+    font-size: 0.875rem;
+}
+
+/* ==========================================================================
+   Header Enhancements
+   ========================================================================== */
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+.nav-icon {
+    font-size: 1.1rem;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    color: var(--text-secondary);
+    transition: background-color 0.2s, color 0.2s;
+    border-radius: 0.5rem;
+    margin: 0.25rem 0;
+}
+
+.dropdown-item:hover {
+    background-color: var(--primary-color);
+    color: #0D0D0D;
+}
+
+.dropdown-icon {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.dropdown-item div {
+    flex-grow: 1;
+}
+
+.dropdown-item strong {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: inherit;
+}
+
+.popularity {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-top: 0.25rem;
+}
+
+.popularity::before {
+    content: "⭐ ";
+}
+
+/* Mobile Menu */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 1rem;
+}
+
+.hamburger-line {
+    width: 100%;
+    height: 3px;
+    background-color: var(--text-color);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* FAQ Search */
+.faq-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 2rem;
+    padding: 0.5rem;
+    transition: box-shadow 0.3s ease;
+}
+
+.search-container:focus-within {
+    box-shadow: 0 0 0 3px rgba(168, 139, 255, 0.1);
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    background: none;
+    padding: 0.5rem 1rem;
+    color: var(--text-color);
+    font-size: 1rem;
+    outline: none;
+}
+
+.search-input::placeholder {
+    color: var(--text-secondary);
+}
+
+.search-button {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    color: var(--primary-color);
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: rgba(168, 139, 255, 0.1);
+}
+
+.search-icon {
+    font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .faq-section,
+    .contact-section {
+        padding: 3rem 5%;
+    }
+
+    .faq-question {
+        padding: 1rem;
+    }
+
+    .faq-answer {
+        padding: 0 1rem 1rem;
+    }
+
+    .contact-item {
+        padding: 1rem;
+    }
+
+    /* Mobile Navigation */
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    nav {
+        position: fixed;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 100px);
+        background-color: var(--card-background);
+        border-top: 1px solid var(--border-color);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 99;
+    }
+
+    nav.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    nav a {
+        font-size: 1.2rem;
+        padding: 1rem;
+        width: 200px;
+        text-align: center;
+        border-radius: 0.5rem;
+        transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+        background-color: rgba(168, 139, 255, 0.1);
+    }
+
+    .dropdown-content {
+        position: static;
+        background: none;
+        box-shadow: none;
+        border: none;
+        margin-top: 1rem;
+        padding: 0;
+        display: block;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .dropdown-item {
+        padding: 0.5rem 1rem;
+        margin: 0.5rem 0;
+        background-color: rgba(168, 139, 255, 0.05);
+        border-radius: 0.5rem;
+    }
+
+    .header-actions {
+        display: none;
+    }
 }

@@ -1,0 +1,272 @@
+ <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-nous - Office Pro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo"><img src="TE.png" alt="Tech Exchange Logo"></a>
+        <nav>
+            <div class="dropdown">
+                <a href="#programme" class="nav-link">
+                    Formation
+                </a>
+                <div class="dropdown-content">
+                    <a href="word.html" class="dropdown-item">
+                        <div>
+                            <strong>Word</strong>
+                            <span class="popularity">★★★★★ (4.9)</span>
+                        </div>
+                    </a>
+                    <a href="excel.html" class="dropdown-item">
+                        <div>
+                            <strong>Excel</strong>
+                            <span class="popularity">★★★★★ (4.8)</span>
+                        </div>
+                    </a>
+                    <a href="powerpoint.html" class="dropdown-item">
+                        <div>
+                            <strong>PowerPoint</strong>
+                            <span class="popularity">★★★★☆ (4.7)</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <a href="#temoignages" class="nav-link">
+                Témoignages
+            </a>
+            <a href="pricing.html" class="nav-link">
+                Prix
+            </a>
+            <a href="faq.html" class="nav-link">
+                FAQs
+            </a>
+            <a href="contact.html" class="nav-link">
+                Contact
+            </a>
+        </nav>
+        <div class="header-actions">
+            <button id="theme-toggle" class="theme-toggle" aria-label="Basculer le mode sombre/clair">
+                <span class="toggle-slider"></span>
+            </button>
+            <a href="pricing.html" class="cta-button">Essayer maintenant</a>
+        </div>
+        <button class="mobile-menu-toggle" aria-label="Menu mobile">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+    </header>
+
+    <section class="hero">
+        <h1>Contactez-nous</h1>
+        <p>Nous sommes là pour vous aider. N'hésitez pas à nous contacter pour toute question.</p>
+    </section>
+
+    <section class="contact-section fade-in">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Contactez-nous</h2>
+                <div class="contact-item">
+                    <span class="contact-icon">📧</span>
+                    <div>
+                        <strong>Email</strong><br>
+                        <a href="mailto:techexchange50@gmail.com">techexchange50@gmail.com</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📱</span>
+                    <div>
+                        <strong>WhatsApp</strong><br>
+                        <a href="https://wa.me/24107171432" target="_blank">+241 07 17 14 32</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📍</span>
+                    <div>
+                        <strong>Adresse</strong><br>
+                        Libreville, Gabon
+                    </div>
+                </div>
+                <p class="response-time">Nous répondons généralement sous 24 heures.</p>
+            </div>
+            <div class="contact-form">
+                <h2>Envoyez-nous un message</h2>
+                <form action="#" method="post" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Nom complet *</label>
+                        <input type="text" id="name" name="name" required>
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Sujet *</label>
+                        <input type="text" id="subject" name="subject" required>
+                        <span class="error-message" id="subjectError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <span class="error-message" id="messageError"></span>
+                    </div>
+                    <button type="submit" class="cta-button">Envoyer le message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Tech Exchange</div>
+            <p>&copy; 2025 - Tous droits réservés</p>
+            <a href="mailto:techexchange50@gmail.com">techexchange50@gmail.com</a>
+            <p class="credits">Conçu par des étudiants de l'INPTIC Gabon</p>
+        </div>
+    </footer>
+
+    <script>
+        // Fonctionnalité de basculement du thème
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        // Charger le thème sauvegardé
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') {
+            body.classList.add('light-mode');
+            themeToggle.classList.add('active');
+        }
+
+        // Basculer le thème
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+            themeToggle.classList.toggle('active');
+            const currentTheme = body.classList.contains('light-mode') ? 'light' : 'dark';
+            localStorage.setItem('theme', currentTheme);
+        });
+
+        // Animation d'apparition progressive
+        const sectionsToAnimate = document.querySelectorAll('.fade-in');
+        if (sectionsToAnimate.length > 0) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            sectionsToAnimate.forEach(section => observer.observe(section));
+        }
+
+        // Gestion du formulaire de contact avec validation
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('contactForm');
+            if (form) {
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    if (validateForm()) {
+                        alert('Merci pour votre message ! Nous vous répondrons bientôt.');
+                        form.reset();
+                    }
+                });
+
+                // Validation en temps réel
+                const inputs = form.querySelectorAll('input, textarea');
+                inputs.forEach(input => {
+                    input.addEventListener('blur', () => validateField(input));
+                });
+            }
+        });
+
+        function validateForm() {
+            let isValid = true;
+            const fields = ['name', 'email', 'subject', 'message'];
+            fields.forEach(field => {
+                if (!validateField(document.getElementById(field))) {
+                    isValid = false;
+                }
+            });
+            return isValid;
+        }
+
+        function validateField(field) {
+            const value = field.value.trim();
+            const errorElement = document.getElementById(field.id + 'Error');
+            let isValid = true;
+            let message = '';
+
+            switch (field.id) {
+                case 'name':
+                    if (!value) {
+                        message = 'Le nom est requis.';
+                        isValid = false;
+                    } else if (value.length < 2) {
+                        message = 'Le nom doit contenir au moins 2 caractères.';
+                        isValid = false;
+                    }
+                    break;
+                case 'email':
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!value) {
+                        message = 'L\'email est requis.';
+                        isValid = false;
+                    } else if (!emailRegex.test(value)) {
+                        message = 'Veuillez entrer un email valide.';
+                        isValid = false;
+                    }
+                    break;
+                case 'subject':
+                    if (!value) {
+                        message = 'Le sujet est requis.';
+                        isValid = false;
+                    } else if (value.length < 5) {
+                        message = 'Le sujet doit contenir au moins 5 caractères.';
+                        isValid = false;
+                    }
+                    break;
+                case 'message':
+                    if (!value) {
+                        message = 'Le message est requis.';
+                        isValid = false;
+                    } else if (value.length < 10) {
+                        message = 'Le message doit contenir au moins 10 caractères.';
+                        isValid = false;
+                    }
+                    break;
+            }
+
+            errorElement.textContent = message;
+            field.classList.toggle('error', !isValid);
+            return isValid;
+        }
+
+        // --- Mobile Menu Toggle ---
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const nav = document.querySelector('nav');
+
+        if (mobileMenuToggle && nav) {
+            mobileMenuToggle.addEventListener('click', () => {
+                mobileMenuToggle.classList.toggle('active');
+                nav.classList.toggle('active');
+            });
+
+            // Fermer le menu au clic sur un lien
+            nav.addEventListener('click', (e) => {
+                if (e.target.tagName === 'A') {
+                    mobileMenuToggle.classList.remove('active');
+                    nav.classList.remove('active');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - Office Pro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo"><img src="TE.png" alt="Tech Exchange Logo"></a>
+        <nav>
+            <div class="dropdown">
+                <a href="#programme" class="nav-link">
+                    Formation
+                </a>
+                <div class="dropdown-content">
+                    <a href="word.html" class="dropdown-item">
+                        <div>
+                            <strong>Word</strong>
+                            <span class="popularity">★★★★★ (4.9)</span>
+                        </div>
+                    </a>
+                    <a href="excel.html" class="dropdown-item">
+                        <div>
+                            <strong>Excel</strong>
+                            <span class="popularity">★★★★★ (4.8)</span>
+                        </div>
+                    </a>
+                    <a href="powerpoint.html" class="dropdown-item">
+                        <div>
+                            <strong>PowerPoint</strong>
+                            <span class="popularity">★★★★☆ (4.7)</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <a href="#temoignages" class="nav-link">
+                Témoignages
+            </a>
+            <a href="pricing.html" class="nav-link">
+                Prix
+            </a>
+            <a href="faq.html" class="nav-link">
+                FAQs
+            </a>
+            <a href="contact.html" class="nav-link">
+                Contact
+            </a>
+        </nav>
+        <div class="header-actions">
+            <button id="theme-toggle" class="theme-toggle" aria-label="Basculer le mode sombre/clair">
+                <span class="toggle-slider"></span>
+            </button>
+            <a href="pricing.html" class="cta-button">Essayer maintenant</a>
+        </div>
+        <button class="mobile-menu-toggle" aria-label="Menu mobile">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+    </header>
+
+    <section class="hero">
+        <h1>Questions Fréquemment Posées</h1>
+        <p>Trouvez les réponses à vos questions sur nos formations Office Pro.</p>
+    </section>
+
+    <section class="faq-section fade-in">
+        <div class="faq-header">
+            <div class="search-container">
+                <input type="text" id="faq-search" placeholder="Rechercher dans les FAQs..." class="search-input">
+                <button class="search-button" aria-label="Rechercher">
+                    <span class="search-icon">🔍</span>
+                </button>
+            </div>
+        </div>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-icon">?</span>
+                    <h3>Comment accéder aux formations après l'achat ?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Après paiement, vous recevrez un lien de téléchargement et le mot de passe via WhatsApp. Les fichiers sont compressés pour un accès rapide.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-icon">?</span>
+                    <h3>Les formations sont-elles à vie ?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Oui, une fois acheté, vous avez accès illimité à vie aux modules et aux mises à jour futures.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-icon">?</span>
+                    <h3>Y a-t-il un support après la formation ?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Absolument ! Nous offrons un support via WhatsApp pour toutes vos questions sur les cours.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-icon">?</span>
+                    <h3>Quels sont les niveaux disponibles pour chaque outil ?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Pour Excel et Word, nous proposons des niveaux Débutant et Intermédiaire. Pour PowerPoint, un niveau Intermédiaire est disponible.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-icon">?</span>
+                    <h3>Comment payer les formations ?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Le paiement se fait via WhatsApp. Contactez-nous pour les détails de paiement sécurisé.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-icon">?</span>
+                    <h3>Les formations incluent-elles des exercices pratiques ?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Oui, chaque module comprend des exercices pratiques pour appliquer ce que vous avez appris.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-icon">?</span>
+                    <h3>Puis-je obtenir un certificat à la fin ?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Oui, avec le Pack Complet, vous recevez un certificat de compétence officiel.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-icon">?</span>
+                    <h3>Les formations sont-elles compatibles avec toutes les versions de Microsoft Office ?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Oui, les cours sont adaptés aux versions récentes, mais les concepts s'appliquent à la plupart des versions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Tech Exchange</div>
+            <p>&copy; 2025 - Tous droits réservés</p>
+            <a href="mailto:techexchange50@gmail.com">techexchange50@gmail.com</a>
+            <p class="credits">Conçu par des étudiants de l'INPTIC Gabon</p>
+        </div>
+    </footer>
+
+    <script>
+        // Fonctionnalité de basculement du thème
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        // Charger le thème sauvegardé
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') {
+            body.classList.add('light-mode');
+            themeToggle.classList.add('active');
+        }
+
+        // Basculer le thème
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+            themeToggle.classList.toggle('active');
+            const currentTheme = body.classList.contains('light-mode') ? 'light' : 'dark';
+            localStorage.setItem('theme', currentTheme);
+        });
+
+        // Animation d'apparition progressive
+        const sectionsToAnimate = document.querySelectorAll('.fade-in');
+        if (sectionsToAnimate.length > 0) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            sectionsToAnimate.forEach(section => observer.observe(section));
+        }
+
+        // Fonctionnalité d'accordéon pour les FAQs
+        document.addEventListener('DOMContentLoaded', () => {
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+                const toggle = item.querySelector('.faq-toggle');
+                answer.style.display = 'none';
+                question.addEventListener('click', () => {
+                    const isOpen = answer.style.display === 'block';
+                    answer.style.display = isOpen ? 'none' : 'block';
+                    toggle.textContent = isOpen ? '+' : '−';
+                });
+            });
+
+            // Fonctionnalité de recherche dans les FAQs
+            const searchInput = document.getElementById('faq-search');
+            if (searchInput) {
+                searchInput.addEventListener('input', function() {
+                    const searchTerm = this.value.toLowerCase();
+                    const faqItems = document.querySelectorAll('.faq-item');
+
+                    faqItems.forEach(item => {
+                        const question = item.querySelector('h3').textContent.toLowerCase();
+                        const answer = item.querySelector('.faq-answer').textContent.toLowerCase();
+
+                        if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            }
+        });
+
+        // --- Mobile Menu Toggle ---
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const nav = document.querySelector('nav');
+
+        if (mobileMenuToggle && nav) {
+            mobileMenuToggle.addEventListener('click', () => {
+                mobileMenuToggle.classList.toggle('active');
+                nav.classList.toggle('active');
+            });
+
+            // Fermer le menu au clic sur un lien
+            nav.addEventListener('click', (e) => {
+                if (e.target.tagName === 'A') {
+                    mobileMenuToggle.classList.remove('active');
+                    nav.classList.remove('active');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

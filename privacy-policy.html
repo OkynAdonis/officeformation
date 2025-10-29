@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politique de Confidentialité - Office Pro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo"><img src="TE.png" alt="Tech Exchange Logo"></a>
+        <nav>
+            <div class="dropdown">
+                <a href="#programme">Programme</a>
+                <div class="dropdown-content">
+                    <a href="excel.html">Excel</a>
+                    <a href="word.html">Word</a>
+                    <a href="powerpoint.html">PowerPoint</a>
+                </div>
+            </div>
+            <a href="#temoignages">Témoignages</a>
+            <a href="pricing.html">Prix</a>
+            <a href="faq.html">FAQs</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="header-actions">
+            <button id="theme-toggle" class="theme-toggle" aria-label="Basculer le mode sombre/clair">
+                <span class="toggle-slider"></span>
+            </button>
+            <a href="pricing.html" class="cta-button">Essayer maintenant</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Politique de Confidentialité</h1>
+        <p>Comment nous protégeons vos données personnelles</p>
+    </section>
+
+    <section class="privacy-section fade-in">
+        <div class="course-container">
+            <h2>1. Collecte des Données</h2>
+            <p>Notre site web ne collecte aucune donnée personnelle des utilisateurs. Nous n'utilisons pas de formulaires de contact, de cookies de suivi ou d'outils d'analyse qui pourraient recueillir des informations sur vous.</p>
+
+            <h2>2. Cookies</h2>
+            <p>Nous utilisons uniquement des cookies essentiels pour le fonctionnement du site, tels que la mémorisation de vos préférences de thème (sombre/clair). Aucun cookie de suivi ou d'analyse n'est utilisé.</p>
+            <p>Vous pouvez désactiver les cookies dans les paramètres de votre navigateur.</p>
+
+            <h2>3. Sécurité</h2>
+            <p>Étant donné que nous ne collectons aucune donnée, les risques de sécurité liés aux données personnelles sont inexistants.</p>
+
+            <h2>4. Modifications</h2>
+            <p>Cette politique peut être mise à jour. La version la plus récente sera toujours disponible sur cette page.</p>
+
+            <p><em>Dernière mise à jour : Octobre 2025</em></p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Tech Exchange</div>
+            <p>&copy; 2025 - Tous droits réservés</p>
+            <a href="mailto:techexchange50@gmail.com">techexchange50@gmail.com</a>
+            <p class="credits">Conçu par des étudiants de l'INPTIC Gabon</p>
+        </div>
+    </footer>
+
+    <script>
+        // Fonctionnalité de basculement du thème
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        // Charger le thème sauvegardé
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') {
+            body.classList.add('light-mode');
+            themeToggle.classList.add('active');
+        }
+
+        // Basculer le thème
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+            themeToggle.classList.toggle('active');
+            const currentTheme = body.classList.contains('light-mode') ? 'light' : 'dark';
+            localStorage.setItem('theme', currentTheme);
+        });
+
+        // Animation d'apparition progressive
+        const sectionsToAnimate = document.querySelectorAll('.fade-in');
+        if (sectionsToAnimate.length > 0) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            sectionsToAnimate.forEach(section => observer.observe(section));
+        }
+    </script>
+</body>
+</html>
