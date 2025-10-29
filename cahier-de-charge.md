@@ -1,89 +1,153 @@
-# Cahier des Charges - Office Pro : Votre Allié pour Maîtriser Office !
+# Cahier des Charges - Office Pro
 
-## Hey, bienvenue dans l'aventure Office Pro !
+## 1. Introduction
 
-Imaginez une plateforme qui rend l'apprentissage d'Office aussi simple et fun que possible. Office Pro, c'est notre bébé : une formation en ligne 100% dédiée à Word, Excel et PowerPoint. L'idée ? Aider tout le monde à devenir un pro des outils Microsoft, que ce soit pour le boulot, les études ou juste pour impressionner ses collègues.
+### 1.1 Présentation du Projet
+Office Pro est une plateforme de formation en ligne spécialisée dans l'enseignement des outils Microsoft Office (Word, Excel, PowerPoint). Le projet vise à fournir des cours accessibles et de qualité pour améliorer les compétences professionnelles des utilisateurs dans l'utilisation de ces logiciels essentiels.
 
-## Ce qu'on veut vraiment accomplir
-On rêve de :
-- **Offrir des cours top qualité** sur les logiciels Office, avec des vrais experts qui expliquent tout clairement.
-- **Rendre l'éducation accessible** à tous, partout, sans se ruiner.
-- **Créer des revenus sympas** grâce à des abonnements ou des achats de cours – pour que le projet vive !
-- **Bâtir une communauté cool** où les apprenants s'entraident et partagent leurs tips.
+### 1.2 Objectifs du Projet
+- Offrir une formation complète et pédagogique sur Microsoft Office.
+- Faciliter l'accès à l'éducation professionnelle en ligne.
+- Générer des revenus via des modèles d'abonnement et de vente de contenu.
+- Développer une communauté d'apprenants actifs.
 
-## Qui on veut aider ?
-Notre cœur de cible, c'est :
-- Les pros qui veulent monter en compétences ou se reconvertir.
-- Les étudiants qui préparent leur avenir pro.
-- Les entrepreneurs et indépendants qui bossent avec Office tous les jours.
-- Des gens de 16 à 50 ans, du niveau intermédiaire à avancé – on veut que ça soit utile pour tous !
+### 1.3 Portée du Projet
+Le projet inclut le développement d'un site web responsive avec les pages suivantes : accueil, cours (Word, Excel, PowerPoint), tarification, FAQ, contact, politique de confidentialité et conditions générales. Les fonctionnalités incluent la navigation, les formulaires de contact, et un design adaptatif.
 
-## Les fonctionnalités qu'on imagine
-### La page d'accueil : votre première impression
-- Un hero accrocheur avec un titre qui donne envie d'agir tout de suite.
-- Une présentation claire des cours (Excel, Word, PowerPoint) avec des visuels sympas.
-- Des prix transparents pour que personne ne soit surpris.
-- Une navigation super fluide, même sur mobile.
+### 1.4 Parties Prenantes
+- **Client/Commanditaire** : [Nom du client ou équipe interne]
+- **Équipe de Développement** : Développeurs front-end, designers UX/UI.
+- **Utilisateurs Cibles** : Professionnels, étudiants, entrepreneurs (16-50 ans, niveaux intermédiaire à avancé).
 
-### Les pages de cours : plongez dans l'action
-- Des modules détaillés pour chaque outil, avec des vidéos, exercices et quiz.
-- Un suivi de progression pour voir où on en est et se motiver.
+## 2. Analyse des Besoins
 
-### Inscription et connexion : rejoignez la famille
-- Un système sécurisé pour s'inscrire et se connecter facilement.
-- Des profils perso pour gérer ses cours et son avancement.
+### 2.1 Contexte et Justification
+Dans un environnement professionnel de plus en plus numérique, la maîtrise des outils Office est essentielle. Cependant, de nombreuses personnes manquent de formation adaptée. Office Pro répond à ce besoin en offrant des cours structurés et accessibles.
 
-### Paiement : simple et sécurisé
-- Intégration avec Stripe ou PayPal pour des paiements en toute confiance.
-- Des abonnements mensuels ou annuels, avec facturation auto.
+### 2.2 Besoins Fonctionnels
+- **Navigation et Structure** : Menu de navigation cohérent sur toutes les pages, avec accès aux cours, tarification, etc.
+- **Contenu Éducatif** : Pages dédiées à chaque outil Office avec descriptions, options d'achat.
+- **Interaction Utilisateur** : Formulaire de contact fonctionnel, thème sombre/clair.
+- **Responsive Design** : Adaptation parfaite sur desktop, tablette et mobile.
 
-### Support et communauté : on est là pour vous
-- Un forum pour discuter et partager.
-- Un support client réactif (chat, email).
-- Des témoignages d'utilisateurs sous forme de carrousel interactif pour inspirer.
+### 2.3 Besoins Non Fonctionnels
+- **Performance** : Temps de chargement < 3 secondes.
+- **Sécurité** : Conformité RGPD, HTTPS obligatoire.
+- **Accessibilité** : Respect des normes WCAG 2.1.
+- **Maintenabilité** : Code commenté en français, structure modulaire.
 
-## Comment on va le construire techniquement
-Pour l'instant, on part sur un site statique simple et efficace :
-- **Frontend** : HTML5, CSS3, JavaScript vanilla – propre, rapide et responsive.
-- **Pas de backend lourd** pour commencer : on utilise des services externes comme Formspree pour les formulaires.
-- **Hébergement** : Netlify ou Vercel pour du HTTPS automatique et une déploie facile.
-- **Sécurité** : Conformité RGPD avec politique de confidentialité, mentions légales, et protection des données.
-- **Design responsive** : Ça marche nickel sur mobile, tablette et desktop.
+## 3. Spécifications Fonctionnelles
 
-## Le look et l'expérience utilisateur
-On veut que ce soit beau et agréable :
-- Couleurs douces : violet pastel (#a88bff), bleu ciel (#e0e7ff), blanc et noir pour un thème sombre/clair.
-- Typo moderne : Inter ou Arial pour une lecture facile.
-- Interface intuitive et accessible (normes WCAG).
-- Petites animations pour rendre l'expérience fun (défilement smooth, carrousel).
+### 3.1 Cas d'Utilisation Principaux
+- **UC1** : Navigation sur le site (accès aux pages via menu).
+- **UC2** : Consultation des cours (affichage des détails et options).
+- **UC3** : Contact (envoi de message via formulaire).
+- **UC4** : Changement de thème (basculement sombre/clair).
 
-## Les défis à relever
-- Respecter les droits d'auteur sur le contenu – on crée du neuf !
-- Gérer les pics de trafic si ça explose.
-- Se démarquer des géants comme Udemy ou Coursera en étant plus perso.
+### 3.2 Interfaces Utilisateur
+- Page d'accueil : Hero, présentation des cours, témoignages.
+- Pages de cours : Description, boutons d'action (WhatsApp, téléchargement).
+- Page tarification : Cartes de prix avec intégration WhatsApp.
+- FAQ : Accordéons interactifs avec recherche.
+- Contact : Formulaire et informations de contact.
 
-## Ce qu'on va livrer
-- Un site web complet et fonctionnel, prêt à accueillir des utilisateurs.
-- Une doc technique claire pour les devs.
-- Un guide utilisateur simple.
-- Des tests pour s'assurer que tout roule.
+## 4. Spécifications Techniques
 
-## Où on en est aujourd'hui (mise à jour en cours)
-Le site de base est déjà construit et synchronisé :
-- Pages d'accueil, cours (Word, Excel, PowerPoint), FAQ, pricing, contact, RGPD – toutes cohérentes.
-- Design responsive avec thème sombre/clair.
-- Formulaire de contact configuré.
-- Commentaires CSS traduits en français pour une meilleure compréhension.
+### 4.1 Architecture Générale
+- **Type d'Application** : Site web statique avec intégrations externes (Formspree pour formulaires).
+- **Technologies** :
+  - Frontend : HTML5, CSS3, JavaScript (ES6+).
+  - Frameworks : Aucun (vanilla JS).
+  - Hébergement : Netlify/Vercel pour déploiement automatisé.
 
-Prochaines étapes : Déploiement en prod, optimisation SEO, ajout de contenu.
+### 4.2 Contraintes Techniques
+- Responsive : Utilisation de media queries et Flexbox/Grid.
+- Compatibilité : Navigateurs modernes (Chrome, Firefox, Safari, Edge).
+- Sécurité : HTTPS, protection contre les injections XSS via validation côté client.
 
-## Planning réaliste
-- **Phase actuelle** : Site de base terminé, en cours de finalisation.
-- **Phase 2** : Ajout de fonctionnalités avancées (backend si besoin).
-- **Phase 3** : Tests complets et lancement.
-- **Phase 4** : Maintenance et évolution.
+### 4.3 Environnements
+- Développement : Local avec VS Code.
+- Production : Hébergement cloud avec CI/CD via GitLab.
 
-## Budget approximatif
-- Développement initial : 5 000 - 10 000 € (déjà largement couvert par le travail actuel).
-- Hébergement annuel : 300 - 500 €.
-- Marketing : 2 000 - 5 000 € pour faire connaître le projet.
+## 5. Design et Expérience Utilisateur
+
+### 5.1 Charte Graphique
+- Couleurs : Violet (#a88bff), bleu (#e0e7ff), blanc, noir.
+- Typographie : Inter (Google Fonts).
+- Icônes : Font Awesome ou similaires.
+
+### 5.2 Maquettes et Wireframes
+[À fournir : Liens vers maquettes Figma ou descriptions textuelles]
+
+### 5.3 Accessibilité
+- Contraste des couleurs > 4.5:1.
+- Navigation au clavier.
+- Textes alternatifs pour images.
+
+## 6. Planning et Jalons
+
+### 6.1 Phases du Projet
+- **Phase 1 (4 semaines)** : Conception et développement de base (pages statiques).
+- **Phase 2 (2 semaines)** : Intégrations (formulaires, responsive).
+- **Phase 3 (1 semaine)** : Tests et corrections.
+- **Phase 4 (1 semaine)** : Déploiement et documentation.
+
+### 6.2 Livrables
+- Code source complet sur GitLab.
+- Site déployé en production.
+- Documentation technique.
+- Guide utilisateur.
+
+## 7. Budget et Ressources
+
+### 7.1 Estimation Budgétaire
+- Développement : 8 000 € (déjà réalisé en interne).
+- Hébergement : 400 €/an.
+- Marketing : 3 000 €.
+
+### 7.2 Ressources Humaines
+- 1 Développeur front-end (lead).
+- 1 Designer UX/UI (consultant).
+
+## 8. Risques et Contraintes
+
+### 8.1 Risques Identifiés
+- Retards dus à des changements de scope.
+- Problèmes de compatibilité navigateurs.
+- Concurrence avec plateformes établies.
+
+### 8.2 Mesures de Mitigation
+- Revue régulière des jalons.
+- Tests cross-browser systématiques.
+- Positionnement différencié (contenu personnalisé).
+
+## 9. Critères d'Acceptation et Validation
+
+### 9.1 Critères de Validation
+- Toutes les pages chargent en < 3s.
+- Formulaire de contact envoie des emails correctement.
+- Design responsive validé sur 3 appareils.
+- Conformité RGPD vérifiée.
+
+### 9.2 Tests
+- Tests unitaires pour JS.
+- Tests d'intégration pour formulaires.
+- Tests utilisateurs (5 participants).
+
+## 10. Aspects Légaux et Contractuels
+
+### 10.1 Propriété Intellectuelle
+Le code et le contenu appartiennent au commanditaire. Respect des droits Microsoft pour les références Office.
+
+### 10.2 Responsabilités
+- Équipe de développement : Livraison du code conforme.
+- Client : Validation des livrables et paiement.
+
+### 10.3 Conditions Générales
+Paiement échelonné : 50% à la signature, 50% à la livraison.
+
+---
+
+**Date de Rédaction** : [Date actuelle]
+**Version** : 2.0
+**Auteur** : Équipe Office Pro
