@@ -1,79 +1,89 @@
-# Cahier des Charges - Office Pro
+# Cahier des Charges - Office Pro : Votre Allié pour Maîtriser Office !
 
-## 1. Présentation du Projet
-Office Pro est une plateforme de formation en ligne dédiée à la maîtrise des outils Microsoft Office (Word, Excel, PowerPoint). L'objectif est de proposer des cours complets et accessibles pour booster les compétences professionnelles des utilisateurs.
+## Hey, bienvenue dans l'aventure Office Pro !
 
-## 2. Objectifs
-- Fournir une formation de qualité sur les logiciels Office.
-- Faciliter l'accès à l'éducation professionnelle en ligne.
-- Générer des revenus via des abonnements ou achats de cours.
-- Construire une communauté d'apprenants.
+Imaginez une plateforme qui rend l'apprentissage d'Office aussi simple et fun que possible. Office Pro, c'est notre bébé : une formation en ligne 100% dédiée à Word, Excel et PowerPoint. L'idée ? Aider tout le monde à devenir un pro des outils Microsoft, que ce soit pour le boulot, les études ou juste pour impressionner ses collègues.
 
-## 3. Public Cible
-- Professionnels en reconversion ou souhaitant améliorer leurs compétences.
-- Étudiants préparant leur insertion professionnelle.
-- Entrepreneurs et indépendants utilisant Office au quotidien.
-- Âge : 16-50 ans, niveau intermédiaire à avancé.
+## Ce qu'on veut vraiment accomplir
+On rêve de :
+- **Offrir des cours top qualité** sur les logiciels Office, avec des vrais experts qui expliquent tout clairement.
+- **Rendre l'éducation accessible** à tous, partout, sans se ruiner.
+- **Créer des revenus sympas** grâce à des abonnements ou des achats de cours – pour que le projet vive !
+- **Bâtir une communauté cool** où les apprenants s'entraident et partagent leurs tips.
 
-## 4. Fonctionnalités Requises
-### 4.1 Page d'Accueil
-- Section Hero avec titre accrocheur et CTA.
-- Présentation des cours (Excel, Word, PowerPoint).
-- Tarification claire.
-- Navigation fluide.
+## Qui on veut aider ?
+Notre cœur de cible, c'est :
+- Les pros qui veulent monter en compétences ou se reconvertir.
+- Les étudiants qui préparent leur avenir pro.
+- Les entrepreneurs et indépendants qui bossent avec Office tous les jours.
+- Des gens de 16 à 50 ans, du niveau intermédiaire à avancé – on veut que ça soit utile pour tous !
 
-### 4.2 Pages de Cours
-- Modules détaillés pour chaque outil.
-- Vidéos, exercices pratiques, quiz.
-- Progression utilisateur.
+## Les fonctionnalités qu'on imagine
+### La page d'accueil : votre première impression
+- Un hero accrocheur avec un titre qui donne envie d'agir tout de suite.
+- Une présentation claire des cours (Excel, Word, PowerPoint) avec des visuels sympas.
+- Des prix transparents pour que personne ne soit surpris.
+- Une navigation super fluide, même sur mobile.
 
-### 4.3 Inscription et Connexion
-- Système d'authentification sécurisé.
-- Gestion des profils utilisateurs.
-- Suivi des progrès.
+### Les pages de cours : plongez dans l'action
+- Des modules détaillés pour chaque outil, avec des vidéos, exercices et quiz.
+- Un suivi de progression pour voir où on en est et se motiver.
 
-### 4.4 Paiement
-- Intégration Stripe ou PayPal.
-- Abonnements mensuels/annuels.
-- Facturation automatique.
+### Inscription et connexion : rejoignez la famille
+- Un système sécurisé pour s'inscrire et se connecter facilement.
+- Des profils perso pour gérer ses cours et son avancement.
 
-### 4.5 Support et Communauté
-- Forum de discussion.
-- Support client (chat, email).
-- Témoignages utilisateurs (sous forme de carrousel interactif).
+### Paiement : simple et sécurisé
+- Intégration avec Stripe ou PayPal pour des paiements en toute confiance.
+- Des abonnements mensuels ou annuels, avec facturation auto.
 
-## 5. Spécifications Techniques
-- **Frontend**: HTML, CSS, JavaScript (React.js recommandé pour dynamisme).
-- **Backend**: Node.js ou Python (Flask/Django) pour API.
-- **Base de Données**: MongoDB ou PostgreSQL pour utilisateurs et contenu.
-- **Hébergement**: AWS, Heroku ou Vercel.
-- **Sécurité**: HTTPS, chiffrement des données, conformité RGPD.
-- **Responsive**: Compatible mobile, tablette, desktop.
+### Support et communauté : on est là pour vous
+- Un forum pour discuter et partager.
+- Un support client réactif (chat, email).
+- Des témoignages d'utilisateurs sous forme de carrousel interactif pour inspirer.
 
-## 6. Design et UX
-- Palette de couleurs : Violet pastel (#a88bff), bleu doux (#e0e7ff), blanc, noir.
-- Typographie : Helvetica Neue, Arial.
-- Interface intuitive, accessible (WCAG 2.1).
-- Animations subtiles pour engagement (effets au défilement, carrousel).
+## Comment on va le construire techniquement
+Pour l'instant, on part sur un site statique simple et efficace :
+- **Frontend** : HTML5, CSS3, JavaScript vanilla – propre, rapide et responsive.
+- **Pas de backend lourd** pour commencer : on utilise des services externes comme Formspree pour les formulaires.
+- **Hébergement** : Netlify ou Vercel pour du HTTPS automatique et une déploie facile.
+- **Sécurité** : Conformité RGPD avec politique de confidentialité, mentions légales, et protection des données.
+- **Design responsive** : Ça marche nickel sur mobile, tablette et desktop.
 
-## 7. Contraintes et Risques
-- Respect des droits d'auteur pour le contenu.
-- Gestion de la charge serveur lors de pics d'inscriptions.
-- Concurrence avec plateformes comme Udemy, Coursera.
+## Le look et l'expérience utilisateur
+On veut que ce soit beau et agréable :
+- Couleurs douces : violet pastel (#a88bff), bleu ciel (#e0e7ff), blanc et noir pour un thème sombre/clair.
+- Typo moderne : Inter ou Arial pour une lecture facile.
+- Interface intuitive et accessible (normes WCAG).
+- Petites animations pour rendre l'expérience fun (défilement smooth, carrousel).
 
-## 8. Livrables
-- Site web fonctionnel.
-- Documentation technique.
-- Manuel utilisateur.
-- Tests unitaires et d'intégration.
+## Les défis à relever
+- Respecter les droits d'auteur sur le contenu – on crée du neuf !
+- Gérer les pics de trafic si ça explose.
+- Se démarquer des géants comme Udemy ou Coursera en étant plus perso.
 
-## 9. Planning Prévisionnel
-- Phase 1 (1 mois) : Conception et développement de base.
-- Phase 2 (2 mois) : Ajout de fonctionnalités avancées.
-- Phase 3 (1 mois) : Tests et déploiement.
-- Phase 4 : Maintenance continue.
+## Ce qu'on va livrer
+- Un site web complet et fonctionnel, prêt à accueillir des utilisateurs.
+- Une doc technique claire pour les devs.
+- Un guide utilisateur simple.
+- Des tests pour s'assurer que tout roule.
 
-## 10. Budget Estimé
-- Développement : 10 000 - 20 000 €
-- Hébergement annuel : 500 €
-- Marketing : 5 000 €
+## Où on en est aujourd'hui (mise à jour en cours)
+Le site de base est déjà construit et synchronisé :
+- Pages d'accueil, cours (Word, Excel, PowerPoint), FAQ, pricing, contact, RGPD – toutes cohérentes.
+- Design responsive avec thème sombre/clair.
+- Formulaire de contact configuré.
+- Commentaires CSS traduits en français pour une meilleure compréhension.
+
+Prochaines étapes : Déploiement en prod, optimisation SEO, ajout de contenu.
+
+## Planning réaliste
+- **Phase actuelle** : Site de base terminé, en cours de finalisation.
+- **Phase 2** : Ajout de fonctionnalités avancées (backend si besoin).
+- **Phase 3** : Tests complets et lancement.
+- **Phase 4** : Maintenance et évolution.
+
+## Budget approximatif
+- Développement initial : 5 000 - 10 000 € (déjà largement couvert par le travail actuel).
+- Hébergement annuel : 300 - 500 €.
+- Marketing : 2 000 - 5 000 € pour faire connaître le projet.

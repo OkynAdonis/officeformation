@@ -1,45 +1,62 @@
-# Priorités : HTTPS, RGPD, Hébergement
+# Office Pro : Liste des Tâches et Progrès
 
-## Tâches à effectuer
+## Hey, équipe ! Voici où on en est dans le projet Office Pro
 
-- [ ] Déploiement sur plateforme avec HTTPS automatique (Netlify/Vercel/GitHub Pages).
-- [x] Ajouter conformité RGPD : Politique de confidentialité, bannière cookies, mentions légales.
-- [ ] Corriger les bugs de validation du site.
-- [ ] Configuration du formulaire de contact (Formspree) pour envoyer les messages à techexchange50@gmail.com.
+On avance bien sur cette plateforme de formation Office. Voici les tâches prioritaires et ce qu'on a déjà fait.
 
-## Suivi des progrès
+## Priorités actuelles : Déploiement, Sécurité et Finalisation
 
-- Pages RGPD créées : privacy-policy.html et terms.html ajoutées au footer.
-- En attente : Configuration déploiement et RGPD.
+### Tâches à faire absolument
+- [ ] **Déploiement en prod** : Mettre le site sur Netlify/Vercel pour du HTTPS automatique et une vraie URL.
+- [x] **RGPD et conformité** : Pages de politique de confidentialité et mentions légales ajoutées au footer.
+- [ ] **Corrections de bugs** : Vérifier la validation du site (W3C, Lighthouse) et corriger les erreurs.
+- [x] **Formulaire de contact** : Configuré avec Formspree pour envoyer les messages à techexchange50@gmail.com.
 
-# Synchronization des pages Word, Excel et PowerPoint avec le design de la homepage
+### Où on en est
+- RGPD : Pages créées et intégrées.
+- Formulaire : Fonctionnel et testé.
+- En attente : Déploiement et tests finaux.
 
-## Tâches à effectuer
+## Synchronisation des pages de cours (Word, Excel, PowerPoint)
 
-- [x] Mettre à jour word.html : Ajouter header, lier style.css, supprimer styles inline, restructurer le body avec course-page-body et course-container, ajouter script theme toggle.
-- [x] Corriger excel.html : Changer le bouton CTA en header pour qu'il soit un lien vers pricing.html.
-- [x] Vérifier powerpoint.html : Terminée, cohérence confirmée.
-- [x] Tester visuellement : Pages ouvertes localement, synchronisation vérifiée.
+### Ce qu'on a fait
+- [x] **Word.html** : Header ajouté, style.css lié, styles inline supprimés, structure mise à jour avec classes course-page-body et course-container, script de thème ajouté.
+- [x] **Excel.html** : Bouton CTA corrigé pour lier vers pricing.html.
+- [x] **PowerPoint.html** : Vérifiée et confirmée cohérente.
+- [x] **Tests visuels** : Pages ouvertes localement, tout synchro !
 
-## Suivi des progrès
+### Progrès
+- Analyse initiale : Terminée.
+- Mises à jour : Toutes faites.
+- Tests : Validés.
 
-- Démarrage : Analyse terminée, plan créé.
-- Mise à jour word.html : Terminée.
-- Correction excel.html : Terminée.
-- Vérification powerpoint.html : Terminée.
+## Mise à jour des pages secondaires (FAQ, Pricing, Contact)
 
-# Mise à jour des pages FAQ, Pricing et Contact pour cohérence avec le nouveau design
+### Ce qu'on a fait
+- [x] **FAQ.html** : Logo pointant vers index.html, nav mise à jour avec classes nav-link, bouton menu mobile et script ajoutés.
+- [x] **Pricing.html** : Même corrections appliquées.
+- [x] **Contact.html** : Même corrections appliquées.
+- [x] **Tests visuels** : Tout cohérent et beau.
 
-## Tâches à effectuer
+### Progrès
+- Analyse : Terminée.
+- Mises à jour : Toutes faites.
+- Tests : Validés.
 
-- [x] Mettre à jour faq.html : Changer le logo href vers index.html, mettre à jour la nav avec classes nav-link, ajouter mobile menu toggle button et script.
-- [x] Mettre à jour pricing.html : Changer le logo href vers index.html, mettre à jour la nav avec classes nav-link, ajouter mobile menu toggle button et script.
-- [x] Mettre à jour contact.html : Changer le logo href vers index.html, mettre à jour la nav avec classes nav-link, ajouter mobile menu toggle button et script.
-- [x] Tester visuellement : Pages ouvertes localement, synchronisation vérifiée.
+## Nouvelles tâches à ajouter (suite à la mise à jour du cahier des charges)
 
-## Suivi des progrès
+### Améliorations pour humaniser le projet
+- [ ] **Traduire tous les commentaires du code en français** : Pour une meilleure compréhension de l'équipe (CSS déjà fait, vérifier HTML/JS).
+- [ ] **Ajouter du contenu engageant** : Descriptions plus fun et humaines sur les pages de cours.
+- [ ] **Optimisation SEO** : Meta descriptions, titres optimisés pour le référencement.
+- [ ] **Tests d'accessibilité** : Vérifier WCAG 2.1 sur toutes les pages.
+- [ ] **Ajout d'animations subtiles** : Pour rendre l'expérience plus vivante (déjà partiellement fait).
+- [ ] **Création d'un guide utilisateur simple** : Pour expliquer comment naviguer sur le site.
 
-- Démarrage : Analyse terminée, plan créé.
-- Mise à jour faq.html : Terminée.
-- Mise à jour pricing.html : Terminée.
-- Mise à jour contact.html : Terminée.
+### Prochaines étapes
+- Finaliser le déploiement.
+- Ajouter du contenu réel (vidéos, exercices).
+- Lancer une campagne de test utilisateurs.
+
+## Rappel : On est une équipe cool, alors communiquons !
+Si tu as des idées ou des questions, dis-le nous. On avance ensemble pour faire de Office Pro un succès !
