@@ -150,4 +150,4 @@ Paiement échelonné : 50% à la signature, 50% à la livraison.
 
 **Date de Rédaction** : [Date actuelle]
 **Version** : 2.0
-**Auteur** : Équipe Office Pro
+**Auteur** : Équipe TECH EXCHANGE

@@ -429,7 +429,7 @@ body.light-mode .hero::before {
 }
 
 .price {
-    font-size: 2.5rem;
+    font-size: 5rem;
     font-weight: bold;
     color: var(--primary-color);
     margin-bottom: 2rem;
@@ -1147,6 +1147,45 @@ body.light-mode .pricing-card .price {
 
 .popularity::before {
     content: "⭐ ";
+}
+
+/* Star rating styles */
+.star-rating {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.star {
+    position: relative;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    font-size: 0.85rem;
+    color: #ddd; /* Empty star color */
+}
+
+.star::before {
+    content: "★";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #ffd700; /* Filled star color */
+    overflow: hidden;
+}
+
+.star.full::before {
+    width: 100%;
+}
+
+.star.half::before {
+    width: 50%;
+}
+
+.star.empty::before {
+    width: 0%;
 }
 
 /* Menu mobile */
