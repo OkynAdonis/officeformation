@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Global & Homepage Styles
+   Styles globaux et de la page d'accueil
    ========================================================================== */
 :root {
     --primary-color: #a88bff; /* Violet accent */
@@ -11,7 +11,7 @@
     --shadow: rgba(0, 0, 0, 0.2);
 }
 
-/* Light mode variables */
+/* Variables du mode clair */
 body.light-mode {
     --primary-color: #a88bff; /* Violet accent */
     --background-color: #FFFFFF; /* White */
@@ -44,7 +44,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 5%;
-    background-color: rgba(13, 13, 13, 0.8); /* Semi-transparent background */
+    /* Arrière-plan semi-transparent */
     border-bottom: 1px solid var(--border-color);
     position: sticky;
     top: 0;
@@ -53,7 +53,7 @@ header {
 }
 
 body.light-mode header {
-    background-color: rgba(255, 255, 255, 0.9); /* Light semi-transparent background for light mode */
+    /* Arrière-plan semi-transparent clair pour le mode clair */
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -101,7 +101,7 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: var(--text-secondary);
+    color: var(--text-color);
     font-weight: 500;
     transition: color 0.3s;
 }
@@ -110,7 +110,7 @@ nav a:hover {
     color: var(--primary-color);
 }
 
-/* --- Dropdown Menu Styles --- */
+/* --- Styles du menu déroulant --- */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -159,12 +159,37 @@ nav a:hover {
 }
 
 .cta-button:hover {
-    background-color: #beadff; /* Lighter violet */
+    /* Violet plus clair */
 }
 
 .hero {
     text-align: center;
     padding: 5rem 5%;
+    background-image: url('wallpaper.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Overlay sombre pour le mode sombre */
+    z-index: 1;
+}
+
+body.light-mode .hero::before {
+    background-color: rgba(255, 255, 255, 0.8); /* Overlay clair pour le mode clair */
+}
+
+.hero h1, .hero p, .hero .cta-button {
+    position: relative;
+    z-index: 2;
 }
 
 .hero h1 {
@@ -236,15 +261,15 @@ nav a:hover {
 }
 
 .card.excel {
-    border-top: 4px solid #107C41; /* Excel Green */
+    /* Vert Excel */
 }
 
 .card.word {
-    border-top: 4px solid #2B579A; /* Word Blue */
+    /* Bleu Word */
 }
 
 .card.powerpoint {
-    border-top: 4px solid #D24726; /* PowerPoint Orange */
+    /* Orange PowerPoint */
 }
 
 .card img {
@@ -262,7 +287,7 @@ nav a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(16, 124, 65, 0.3); /* Green overlay with opacity */
+    /* Superposition verte avec opacité */
     border-radius: 0.5rem;
     pointer-events: none;
 }
@@ -274,7 +299,7 @@ nav a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(43, 87, 154, 0.3); /* Blue overlay with opacity */
+    /* Superposition bleue avec opacité */
     border-radius: 0.5rem;
     pointer-events: none;
 }
@@ -286,7 +311,7 @@ nav a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(210, 71, 38, 0.3); /* Orange overlay with opacity */
+    /* Superposition orange avec opacité */
     border-radius: 0.5rem;
     pointer-events: none;
 }
@@ -578,7 +603,7 @@ footer {
         text-align: left;
     }
 
-    /* Mobile responsiveness for cards: set border colors permanently since hover doesn't work on touch */
+    /* Responsivité mobile pour les cartes : définir les couleurs de bordure de manière permanente car le survol ne fonctionne pas sur tactile */
     .card.excel {
         border-color: #107C41;
     }
@@ -591,7 +616,7 @@ footer {
         border-color: #D24726;
     }
 
-    /* Remove hover effects on mobile */
+    /* Supprimer les effets de survol sur mobile */
     .card:hover {
         transform: none;
     }
@@ -609,7 +634,7 @@ footer {
     }
 }
 /* ==========================================================================
-   Pricing Page Styles
+   Styles de la page de tarification
    ========================================================================== */
 
 .pricing-cards {
@@ -695,7 +720,7 @@ footer {
     background-color: #1EBE5A;
 }
 
-/* Theme toggle button */
+/* Bouton de basculement de thème */
 .theme-toggle {
     position: relative;
     width: 50px;
@@ -731,7 +756,7 @@ footer {
     gap: 1rem;
 }
 
-/* Light mode adjustments for pricing cards */
+/* Ajustements du mode clair pour les cartes de tarification */
 body.light-mode .pricing-card {
     background-color: #FFFFFF;
     border-color: #E0E0E0;
@@ -749,7 +774,7 @@ body.light-mode .pricing-card .price {
 }
 
 /* ==========================================================================
-   Course Page Styles (excel.html, word.html, etc.)
+   Styles des pages de cours (excel.html, word.html, etc.)
    ========================================================================== */
 
 .course-page-body {
@@ -826,7 +851,7 @@ body.light-mode .pricing-card .price {
 }
 
 /* ==========================================================================
-   Privacy Policy & Terms Pages Styles
+   Styles des pages de politique de confidentialité et de conditions générales
    ========================================================================== */
 
 .privacy-section, .terms-section {
@@ -866,7 +891,7 @@ body.light-mode .pricing-card .price {
 }
 
 /* ==========================================================================
-   FAQ Page Styles
+   Styles de la page FAQ
    ========================================================================== */
 
 .faq-section {
@@ -939,7 +964,7 @@ body.light-mode .pricing-card .price {
 }
 
 /* ==========================================================================
-   Contact Page Styles
+   Styles de la page de contact
    ========================================================================== */
 
 .contact-section {
@@ -1059,7 +1084,7 @@ body.light-mode .pricing-card .price {
 }
 
 /* ==========================================================================
-   Header Enhancements
+   Améliorations de l'en-tête
    ========================================================================== */
 
 .nav-link {
@@ -1124,7 +1149,7 @@ body.light-mode .pricing-card .price {
     content: "⭐ ";
 }
 
-/* Mobile Menu */
+/* Menu mobile */
 .mobile-menu-toggle {
     display: none;
     flex-direction: column;
@@ -1159,7 +1184,7 @@ body.light-mode .pricing-card .price {
     transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* FAQ Search */
+/* Recherche FAQ */
 .faq-header {
     margin-bottom: 2rem;
     text-align: center;
@@ -1213,7 +1238,7 @@ body.light-mode .pricing-card .price {
     font-size: 1.2rem;
 }
 
-/* Responsive Design */
+/* Conception responsive */
 @media (max-width: 768px) {
     .contact-container {
         grid-template-columns: 1fr;
@@ -1237,7 +1262,7 @@ body.light-mode .pricing-card .price {
         padding: 1rem;
     }
 
-    /* Mobile Navigation */
+    /* Navigation mobile */
     .mobile-menu-toggle {
         display: flex;
     }
