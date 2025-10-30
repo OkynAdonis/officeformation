@@ -1,33 +1,19 @@
 /* ==========================================================================
-<<<<<<<<HEAD
-<< <<<< HEAD
-   Styles globaux et de la page d'accueil
-   ========================================================================== */
-:root { accent */
-=======
-   Global & Homepage Styles
-   ========================================================================== */
-
-:root{
-    --primry-olor: #a88bff; /* Violet ac
->>>>>>> 706b666ceed133d39e706b12124d0ebc74902ae5
-    --primary-color: #CB8F13; /* Golden accent */
-=======
    Global & Homepage Styles
    ========================================================================== */
 
 :root {
- 
-   --primary-color: #a88bff; /* Violet accent */
-<<<<<<< HEAD>>>>>>> 706b666ceed133d39e706b12124d0ebc74902ae5
+    --primary-color: #a88bff; /* Violet accent */
     --background-color: #0D0D0D; /* Near black */
     --card-background: #1A1A1A; /* Dark gray for cards */
-    --text-color: #F5F5F5; /* Off-whnr primary-color: #CB8F13; /* Golden accent */
-=======
+    --text-color: #F5F5F5; /* Off-white */
+    --text-secondary: #666666; /* Dark gray for subtitles */
+    --border-color: #333333;
+    --shadow: rgba(0, 0, 0, 0.3);
+}
+
 /* Light mode variables */
 body.light-mode {
-    --primary-color: #a88bff; /* Violet accent */
->>>>>>> 706b666ceed133d39e706b12124d0ebc74902ae5
     --background-color: #FFFFFF; /* White */
     --card-background: #F9F9F9; /* Light gray for cards */
     --text-color: #111111; /* Near black */
@@ -37,9 +23,8 @@ body.light-mode {
 }
 
 html {
-    /* Compense la hauteur du header fixe pour le défilement */
-    scroll-padding-top: 100px; 
-    scroll-behavior: smooth; /* Active le défilement fluide nativement */
+    scroll-padding-top: 100px;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -58,11 +43,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 5%;
-<<<<<<< HEAD
-    /* Arrière-plan semi-transparent */
-=======
-    background-color: rgba(13, 13, 13, 0.8); /* Semi-transparent background */
->>>>>>> 706b666ceed133d39e706b12124d0ebc74902ae5
+    background-color: rgba(13, 13, 13, 0.8);
     border-bottom: 1px solid var(--border-color);
     position: sticky;
     top: 0;
@@ -70,49 +51,19 @@ header {
     backdrop-filter: blur(10px);
 }
 
-<<<<<<< HEAD
-body.light-mode header {
-    /* Arrière-plan semi-transparent clair pour le mode clair */
-    border-bottom: 1px solid var(--border-color);
-}
-
-body.light-mode nav a {
-    color: var(--text-secondary);
-}
-
-body.light-mode nav a:hover {
-    color: var(--primary-color);
-}
-
-body.light-mode .dropdown-content {
-    background-color: var(--card-background);
-    border-color: var(--border-color);
-}
-
-body.light-mode .dropdown-content a {
-    color: var(--text-secondary);
-}
-
-body.light-mode .dropdown-content a:hover {
-    background-color: var(--primary-color);
-    color: #0D0D0D;
-}
-
-=======
->>>>>>> 706b666ceed133d39e706b12124d0ebc74902ae5
 .logo {
     font-size: 2rem;
-    font-weight: bold; /* Conserve pour le cas où l'image ne charge pas */
-    color: var(--text-color); /* Conserve pour le cas où l'image ne charge pas */
+    font-weight: bold;
+    color: var(--text-color);
     text-decoration: none;
     display: flex;
     align-items: center;
 }
 
 .logo img {
-    height: 58.5px; /* Taille réduite de 25% (78px * 0.75) */
+    height: 58.5px;
     width: auto;
-    border-radius: 8px; /* Bords arrondis */
+    border-radius: 8px;
 }
 
 nav {
@@ -122,11 +73,7 @@ nav {
 
 nav a {
     text-decoration: none;
-<<<<<<< HEAD
-    color: var(--text-color);
-=======
     color: var(--text-secondary);
->>>>>>> 706b666ceed133d39e706b12124d0ebc74902ae5
     font-weight: 500;
     transition: color 0.3s;
 }
@@ -135,11 +82,7 @@ nav a:hover {
     color: var(--primary-color);
 }
 
-<<<<<<< HEAD
-/* --- Styles du menu déroulant --- */
-=======
-/* --- Dropdown Menu Styles --- */
->>>>>>> 706b666ceed133d39e706b12124d0ebc74902ae5
+/* Dropdown Menu Styles */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -154,8 +97,8 @@ nav a:hover {
     z-index: 1;
     border-radius: 0.75rem;
     border: 1px solid var(--border-color);
-    margin-top: 0.5rem; /* Espace entre le bouton et le menu */
-    overflow: hidden; /* Pour que les coins arrondis s'appliquent aux enfants */
+    margin-top: 0.5rem;
+    overflow: hidden;
 }
 
 .dropdown-content a {
@@ -169,7 +112,7 @@ nav a:hover {
 
 .dropdown-content a:hover {
     background-color: var(--primary-color);
-    color: #0D0D0D; /* Texte sombre sur fond violet */
+    color: #0D0D0D;
 }
 
 .dropdown:hover .dropdown-content {
@@ -188,57 +131,12 @@ nav a:hover {
 }
 
 .cta-button:hover {
-<<<<<<< HEAD
-    filter: brightness(1.15);
-=======
-    background-color: #beadff; /* Lighter violet */
->>>>>>> 706b666ceed133d39e706b12124d0ebc74902ae5
+    background-color: #beadff;
 }
 
 .hero {
     text-align: center;
     padding: 5rem 5%;
-<<<<<<< HEAD
-    background-image: url('wallpaper.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    position: relative;
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7); /* Overlay sombre pour le mode sombre */
-    z-index: 1;
-}
-
-body.light-mode .hero::before {
-    background-color: rgba(255, 255, 255, 0.8); /* Overlay clair pour le mode clair */
-}
-
-/* Arrière-plans spécifiques pour les pages */
-.hero-pricing {
-    background-image: url('goldenblack.jpg');
-}
-
-.hero-contact {
-    background-image: url('blackblue.jpg');
-}
-
-.hero-terms {
-    background-image: url('redblack.jpg');
-}
-
-.hero h1, .hero p, .hero .cta-button {
-    position: relative;
-    z-index: 2;
-=======
->>>>>>> 706b666ceed133d39e706b12124d0ebc74902ae5
 }
 
 .hero h1 {
@@ -295,90 +193,19 @@ body.light-mode .hero::before {
 
 .card:hover {
     transform: translateY(-5px);
-<<<<<<< HEAD
-}
-
-.card.excel:hover {
-    border-color: #107C41;
-}
-
-.card.word:hover {
-    border-color: #2B579A;
-}
-
-.card.powerpoint:hover {
-    border-color: #D24726;
-}
-
-.card.excel {
-    /* Vert Excel */
-}
-
-.card.word {
-    /* Bleu Word */
-}
-
-.card.powerpoint {
-    /* Orange PowerPoint */
-}
-
-.card img {
-    width: 100%;
-    height: auto;
-    border-radius: 0.5rem;
-    margin-bottom: 1rem;
-    position: relative;
-}
-
-.card.excel:hover .card img::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    /* Superposition verte avec opacité */
-    border-radius: 0.5rem;
-    pointer-events: none;
-}
-
-.card.word:hover .card img::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    /* Superposition bleue avec opacité */
-    border-radius: 0.5rem;
-    pointer-events: none;
-}
-
-.card.powerpoint:hover .card img::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    /* Superposition orange avec opacité */
-    border-radius: 0.5rem;
-    pointer-events: none;
-=======
     border-color: var(--primary-color);
 }
 
 .card.excel {
-    border-top: 4px solid #107C41; /* Excel Green */
+    border-top: 4px solid #107C41;
 }
 
 .card.word {
-    border-top: 4px solid #2B579A; /* Word Blue */
+    border-top: 4px solid #2B579A;
 }
 
 .card.powerpoint {
-    border-top: 4px solid #D24726; /* PowerPoint Orange */
->>>>>>> 706b666ceed133d39e706b12124d0ebc74902ae5
+    border-top: 4px solid #D24726;
 }
 
 .card h3 {
@@ -396,7 +223,7 @@ body.light-mode .hero::before {
 .card-link {
     text-decoration: none;
     color: inherit;
-    display: block; /* Pour que le lien prenne toute la taille de la carte */
+    display: block;
 }
 
 .testimonials {
@@ -494,11 +321,7 @@ body.light-mode .hero::before {
 }
 
 .price {
-<<<<<<< HEAD
-    font-size: 5rem;
-=======
     font-size: 2.5rem;
->>>>>>> 706b666ceed133d39e706b12124d0ebc74902ae5
     font-weight: bold;
     color: var(--primary-color);
     margin-bottom: 2rem;
@@ -517,7 +340,6 @@ body.light-mode .hero::before {
 footer {
     border-top: 1px solid var(--border-color);
     padding: 4rem 5% 2rem;
-<<<<<<< HEAD
     margin-top: 5rem;
     background-color: var(--background-color);
 }
@@ -610,64 +432,19 @@ footer {
     font-size: 0.85rem;
 }
 
-@media (max-width: 768px) {
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .footer-section {
-        text-align: center;
-    }
-
-    .footer-logo {
-        justify-content: center;
-    }
-
-    footer {
-        padding: 3rem 5% 1rem;
-    }
-=======
-    text-align: center;
-    margin-top: 5rem;
-}
-
-.footer-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.footer-logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--text-color);
-    margin-bottom: 1rem;
-}
-
-footer p, footer a {
-    color: var(--text-secondary);
-    text-decoration: none;
-    margin: 0.5rem 0;
-}
-
-footer .credits {
-    font-style: italic;
-    font-size: 0.9rem;
-    margin-top: 2rem;
->>>>>>> 706b666ceed133d39e706b12124d0ebc74902ae5
-}
-
-/* Styles pour les animations au défilement */
+/* Animation styles */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
+
 .fade-in.is-visible {
     opacity: 1;
     transform: translateY(0);
 }
 
+/* Responsive */
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 2.5rem;
@@ -696,53 +473,30 @@ footer .credits {
     }
 
     header {
-<<<<<<< HEAD
-        flex-direction: row;
-        justify-content: space-between;
-        text-align: left;
-    }
-
-    /* Responsivité mobile pour les cartes : définir les couleurs de bordure de manière permanente car le survol ne fonctionne pas sur tactile */
-    .card.excel {
-        border-color: #107C41;
-    }
-
-    .card.word {
-        border-color: #2B579A;
-    }
-
-    .card.powerpoint {
-        border-color: #D24726;
-    }
-
-    /* Supprimer les effets de survol sur mobile */
-    .card:hover {
-        transform: none;
-    }
-
-    .card.excel:hover,
-    .card.word:hover,
-    .card.powerpoint:hover {
-        border-color: inherit;
-    }
-
-    .card.excel:hover .card img::after,
-    .card.word:hover .card img::after,
-    .card.powerpoint:hover .card img::after {
-        display: none;
-    }
-}
-/* ==========================================================================
-   Styles de la page de tarification
-=======
         flex-direction: column;
         text-align: center;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+
+    .footer-logo {
+        justify-content: center;
+    }
+
+    footer {
+        padding: 3rem 5% 1rem;
     }
 }
 
 /* ==========================================================================
    Pricing Page Styles
->>>>>>> 706b666ceed133d39e706b12124d0ebc74902ae5
    ========================================================================== */
 
 .pricing-cards {
@@ -760,43 +514,39 @@ footer .credits {
 }
 
 .pricing-card {
-    background-color: #FFFFFF;
-    border: 1px solid #E0E0E0;
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 2rem;
     flex: 1;
     min-width: 300px;
     max-width: 350px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 10px var(--shadow);
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .pricing-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px var(--shadow);
 }
 
 .pricing-card h3 {
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: #111111;
+    color: var(--text-color);
 }
 
 .pricing-card .price {
     font-size: 2rem;
     font-weight: bold;
-<<<<<<< HEAD
     color: var(--primary-color);
-=======
-    color: #a88bff;
->>>>>>> 706b666ceed133d39e706b12124d0ebc74902ae5
     margin-bottom: 1rem;
 }
 
 .pricing-card p {
-    color: #666666;
+    color: var(--text-secondary);
     margin-bottom: 1.5rem;
 }
 
@@ -808,7 +558,7 @@ footer .credits {
 
 .pricing-card li {
     margin-bottom: 0.5rem;
-    color: #666666;
+    color: var(--text-secondary);
 }
 
 .check {
@@ -832,11 +582,7 @@ footer .credits {
     background-color: #1EBE5A;
 }
 
-<<<<<<< HEAD
-/* Bouton de basculement de thème */
-=======
 /* Theme toggle button */
->>>>>>> 706b666ceed133d39e706b12124d0ebc74902ae5
 .theme-toggle {
     position: relative;
     width: 50px;
@@ -848,11 +594,7 @@ footer .credits {
 }
 
 .theme-toggle.active {
-<<<<<<< HEAD
     background-color: var(--primary-color);
-=======
-    background-color: #a88bff;
->>>>>>> 706b666ceed133d39e706b12124d0ebc74902ae5
 }
 
 .toggle-slider {
@@ -876,37 +618,25 @@ footer .credits {
     gap: 1rem;
 }
 
-<<<<<<< HEAD
-/* Ajustements du mode clair pour les cartes de tarification */
-=======
 /* Light mode adjustments for pricing cards */
->>>>>>> 706b666ceed133d39e706b12124d0ebc74902ae5
 body.light-mode .pricing-card {
-    background-color: #FFFFFF;
-    border-color: #E0E0E0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    background-color: var(--card-background);
+    border-color: var(--border-color);
+    box-shadow: 0 2px 10px var(--shadow);
 }
 
 body.light-mode .pricing-card h3,
 body.light-mode .pricing-card p,
 body.light-mode .pricing-card li {
-    color: #111111;
+    color: var(--text-color);
 }
 
 body.light-mode .pricing-card .price {
-<<<<<<< HEAD
     color: var(--primary-color);
 }
 
 /* ==========================================================================
-   Styles des pages de cours (excel.html, word.html, etc.)
-=======
-    color: #a88bff;
-}
-
-/* ==========================================================================
    Course Page Styles (excel.html, word.html, etc.)
->>>>>>> 706b666ceed133d39e706b12124d0ebc74902ae5
    ========================================================================== */
 
 .course-page-body {
@@ -949,23 +679,6 @@ body.light-mode .pricing-card .price {
     margin-top: 0;
 }
 
-.whatsapp-button {
-    display: inline-block;
-    background-color: #25D366; /* Couleur de WhatsApp */
-    color: white;
-    padding: 1rem 2rem;
-    border-radius: 0.75rem;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 1.25rem;
-    margin-top: 1rem;
-    transition: background-color 0.3s;
-}
-
-.whatsapp-button:hover {
-    background-color: #1EBE5A;
-}
-
 .download-link {
     display: block;
     margin: 2rem 0;
@@ -980,11 +693,10 @@ body.light-mode .pricing-card .price {
     color: var(--primary-color);
     text-decoration: none;
     font-weight: 500;
-<<<<<<< HEAD
 }
 
 /* ==========================================================================
-   Styles des pages de politique de confidentialité et de conditions générales
+   Privacy Policy and Terms Pages Styles
    ========================================================================== */
 
 .privacy-section, .terms-section {
@@ -1024,7 +736,7 @@ body.light-mode .pricing-card .price {
 }
 
 /* ==========================================================================
-   Styles de la page FAQ
+   FAQ Page Styles
    ========================================================================== */
 
 .faq-section {
@@ -1061,7 +773,7 @@ body.light-mode .pricing-card .price {
 }
 
 .faq-question:hover {
-    background-color: rgba(203, 143, 19, 0.1);
+    background-color: rgba(168, 139, 255, 0.1);
 }
 
 .faq-icon {
@@ -1097,7 +809,7 @@ body.light-mode .pricing-card .price {
 }
 
 /* ==========================================================================
-   Styles de la page de contact
+   Contact Page Styles
    ========================================================================== */
 
 .contact-section {
@@ -1157,7 +869,7 @@ body.light-mode .pricing-card .price {
 }
 
 .contact-item a:hover {
-    color: #EAC975; /* Lighter shade of primary color */
+    color: #beadff;
 }
 
 .response-time {
@@ -1201,7 +913,7 @@ body.light-mode .pricing-card .price {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(203, 143, 19, 0.1);
+    box-shadow: 0 0 0 3px rgba(168, 139, 255, 0.1);
 }
 
 .form-group input.error,
@@ -1217,7 +929,7 @@ body.light-mode .pricing-card .price {
 }
 
 /* ==========================================================================
-   Améliorations de l'en-tête
+   Header Enhancements
    ========================================================================== */
 
 .nav-link {
@@ -1295,7 +1007,7 @@ body.light-mode .pricing-card .price {
     width: 1em;
     height: 1em;
     font-size: 0.85rem;
-    color: #ddd; /* Empty star color */
+    color: #ddd;
 }
 
 .star::before {
@@ -1305,7 +1017,7 @@ body.light-mode .pricing-card .price {
     left: 0;
     width: 100%;
     height: 100%;
-    color: #ffd700; /* Filled star color */
+    color: #ffd700;
     overflow: hidden;
 }
 
@@ -1321,7 +1033,7 @@ body.light-mode .pricing-card .price {
     width: 0%;
 }
 
-/* Menu mobile */
+/* Mobile menu */
 .mobile-menu-toggle {
     display: none;
     flex-direction: column;
@@ -1356,7 +1068,7 @@ body.light-mode .pricing-card .price {
     transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* Recherche FAQ */
+/* FAQ search */
 .faq-header {
     margin-bottom: 2rem;
     text-align: center;
@@ -1375,7 +1087,7 @@ body.light-mode .pricing-card .price {
 }
 
 .search-container:focus-within {
-    box-shadow: 0 0 0 3px rgba(203, 143, 19, 0.1);
+    box-shadow: 0 0 0 3px rgba(168, 139, 255, 0.1);
 }
 
 .search-input {
@@ -1403,14 +1115,14 @@ body.light-mode .pricing-card .price {
 }
 
 .search-button:hover {
-    background-color: rgba(203, 143, 19, 0.1);
+    background-color: rgba(168, 139, 255, 0.1);
 }
 
 .search-icon {
     font-size: 1.2rem;
 }
 
-/* Conception responsive */
+/* Responsive design */
 @media (max-width: 768px) {
     .contact-container {
         grid-template-columns: 1fr;
@@ -1434,7 +1146,7 @@ body.light-mode .pricing-card .price {
         padding: 1rem;
     }
 
-    /* Navigation mobile */
+    /* Mobile navigation */
     .mobile-menu-toggle {
         display: flex;
     }
@@ -1474,7 +1186,7 @@ body.light-mode .pricing-card .price {
     }
 
     nav a:hover {
-        background-color: rgba(203, 143, 19, 0.1);
+        background-color: rgba(168, 139, 255, 0.1);
     }
 
     .dropdown-content {
@@ -1492,7 +1204,7 @@ body.light-mode .pricing-card .price {
     .dropdown-item {
         padding: 0.5rem 1rem;
         margin: 0.5rem 0;
-        background-color: rgba(203, 143, 19, 0.05);
+        background-color: rgba(168, 139, 255, 0.05);
         border-radius: 0.5rem;
     }
 
@@ -1500,6 +1212,3 @@ body.light-mode .pricing-card .price {
         display: none;
     }
 }
-=======
-}
->>>>>>> 706b666ceed133d39e706b12124d0ebc74902ae5
