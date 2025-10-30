@@ -199,17 +199,17 @@
 
         <div class="footer-bottom">
             <p>&copy; 2025 Tech Exchange - Tous droits réservés</p>
-            <p class="credits">Conçu par des étudiants de l'INPTIC Gabon</p>
+            <p class="credits"></p>
         </div>
     </footer>
 
 
     <!-- 
-      Espace pour le script d'analyse d'audience (par exemple, Google Analytics).
-      Vous obtiendrez ce script en créant une propriété sur le site de Google Analytics.
+      Espace pour le script d'analyse d'audience (Google Analytics).
+      Voir ropriété : Google Analytics.
       Il est généralement recommandé de le placer juste avant la fermeture de la balise </body>.
     -->
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=VOTRE_ID_DE_SUIVI"></script> -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=ID DE SUIVI"></script> -->
 
     <script>
         // Fonctionnalité de basculement du thème
@@ -255,7 +255,6 @@
             }
 
             // --- Défilement fluide pour les ancres ---
-            // Note: `scroll-behavior: smooth;` en CSS gère déjà cela pour la plupart des navigateurs modernes.
             // Ce script est une surcoupe pour une compatibilité maximale et un contrôle plus fin si besoin.
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
@@ -298,7 +297,7 @@
 
                 // Initial state
                 updateSlider();
-                window.addEventListener('resize', updateSlider); // Recalculate on resize
+                window.addEventListener('resize', updateSlider); // Recalculer au redimensionnement
             }
 
             // --- Mobile Menu Toggle ---

@@ -2,7 +2,7 @@
    Styles globaux et de la page d'accueil
    ========================================================================== */
 :root {
-    --primary-color: #a88bff; /* Violet accent */
+    --primary-color: #CB8F13; /* Golden accent */
     --background-color: #0D0D0D; /* Near black */
     --card-background: #1A1A1A; /* Dark gray for cards */
     --text-color: #F5F5F5; /* Off-white */
@@ -13,7 +13,7 @@
 
 /* Variables du mode clair */
 body.light-mode {
-    --primary-color: #a88bff; /* Violet accent */
+    --primary-color: #CB8F13; /* Golden accent */
     --background-color: #FFFFFF; /* White */
     --card-background: #F9F9F9; /* Light gray for cards */
     --text-color: #111111; /* Near black */
@@ -159,7 +159,7 @@ nav a:hover {
 }
 
 .cta-button:hover {
-    /* Violet plus clair */
+    filter: brightness(1.15);
 }
 
 .hero {
@@ -185,6 +185,19 @@ nav a:hover {
 
 body.light-mode .hero::before {
     background-color: rgba(255, 255, 255, 0.8); /* Overlay clair pour le mode clair */
+}
+
+/* Arrière-plans spécifiques pour les pages */
+.hero-pricing {
+    background-image: url('goldenblack.jpg');
+}
+
+.hero-contact {
+    background-image: url('blackblue.jpg');
+}
+
+.hero-terms {
+    background-image: url('redblack.jpg');
 }
 
 .hero h1, .hero p, .hero .cta-button {
@@ -679,7 +692,7 @@ footer {
 .pricing-card .price {
     font-size: 2rem;
     font-weight: bold;
-    color: #a88bff;
+    color: var(--primary-color);
     margin-bottom: 1rem;
 }
 
@@ -732,7 +745,7 @@ footer {
 }
 
 .theme-toggle.active {
-    background-color: #a88bff;
+    background-color: var(--primary-color);
 }
 
 .toggle-slider {
@@ -770,7 +783,7 @@ body.light-mode .pricing-card li {
 }
 
 body.light-mode .pricing-card .price {
-    color: #a88bff;
+    color: var(--primary-color);
 }
 
 /* ==========================================================================
@@ -928,7 +941,7 @@ body.light-mode .pricing-card .price {
 }
 
 .faq-question:hover {
-    background-color: rgba(168, 139, 255, 0.1);
+    background-color: rgba(203, 143, 19, 0.1);
 }
 
 .faq-icon {
@@ -1024,7 +1037,7 @@ body.light-mode .pricing-card .price {
 }
 
 .contact-item a:hover {
-    color: #beadff;
+    color: #EAC975; /* Lighter shade of primary color */
 }
 
 .response-time {
@@ -1068,7 +1081,7 @@ body.light-mode .pricing-card .price {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(168, 139, 255, 0.1);
+    box-shadow: 0 0 0 3px rgba(203, 143, 19, 0.1);
 }
 
 .form-group input.error,
@@ -1242,7 +1255,7 @@ body.light-mode .pricing-card .price {
 }
 
 .search-container:focus-within {
-    box-shadow: 0 0 0 3px rgba(168, 139, 255, 0.1);
+    box-shadow: 0 0 0 3px rgba(203, 143, 19, 0.1);
 }
 
 .search-input {
@@ -1270,7 +1283,7 @@ body.light-mode .pricing-card .price {
 }
 
 .search-button:hover {
-    background-color: rgba(168, 139, 255, 0.1);
+    background-color: rgba(203, 143, 19, 0.1);
 }
 
 .search-icon {
@@ -1341,7 +1354,7 @@ body.light-mode .pricing-card .price {
     }
 
     nav a:hover {
-        background-color: rgba(168, 139, 255, 0.1);
+        background-color: rgba(203, 143, 19, 0.1);
     }
 
     .dropdown-content {
@@ -1359,7 +1372,7 @@ body.light-mode .pricing-card .price {
     .dropdown-item {
         padding: 0.5rem 1rem;
         margin: 0.5rem 0;
-        background-color: rgba(168, 139, 255, 0.05);
+        background-color: rgba(203, 143, 19, 0.05);
         border-radius: 0.5rem;
     }
 
