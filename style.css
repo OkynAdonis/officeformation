@@ -202,6 +202,10 @@ body.light-mode .hero::before {
     background-image: url('redblack.jpg');
 }
 
+.hero-faq {
+    background-image: url('faqs.jpg');
+}
+
 .hero h1, .hero p, .hero .cta-button {
     position: relative;
     z-index: 2;
@@ -913,6 +917,27 @@ body.light-mode .pricing-card .price {
     padding: 5rem 5%;
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
+}
+
+.faq-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Overlay sombre pour le mode sombre */
+    z-index: 1;
+}
+
+body.light-mode .faq-section::before {
+    background-color: rgba(255, 255, 255, 0.8); /* Overlay clair pour le mode clair */
+}
+
+.faq-section > * {
+    position: relative;
+    z-index: 2;
 }
 
 .faq-container {
