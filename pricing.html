@@ -11,7 +11,6 @@
 </head>
 <body>
     <header>
-<<<<<<< HEAD
         <a href="index.html" class="logo"><img src="TE.png" alt="Tech Exchange Logo"></a>
         <nav>
             <a href="index.html" class="nav-link">Accueil</a>
@@ -73,20 +72,6 @@
             <a href="contact.html" class="nav-link">
                 Contact
             </a>
-=======
-        <a href="index.html" class="logo"><img src="TE.png" alt="Tech Exchange Logo"></a>
-        <nav>
-            <div class="dropdown">
-                <a href="#programme">Programme</a>
-                <div class="dropdown-content">
-                    <a href="excel.html">Excel</a>
-                    <a href="word.html">Word</a>
-                    <a href="powerpoint.html">PowerPoint</a>
-                </div>
-            </div>
-            <a href="#temoignages">Témoignages</a>
-            <a href="pricing.html">Prix</a>
->>>>>>> 706b666ceed133d39e706b12124d0ebc74902ae5
         </nav>
         <div class="header-actions">
             <button id="theme-toggle" class="theme-toggle" aria-label="Basculer le mode sombre/clair">
@@ -94,7 +79,6 @@
             </button>
             <a href="pricing.html" class="cta-button">Essayer maintenant</a>
         </div>
-<<<<<<< HEAD
         <button class="mobile-menu-toggle" aria-label="Menu mobile">
             <span class="hamburger-line"></span>
             <span class="hamburger-line"></span>
@@ -102,12 +86,7 @@
         </button>
     </header>
 
-    <section class="hero hero-pricing">
-=======
-    </header>
-
-    <section class="hero">
->>>>>>> 706b666ceed133d39e706b12124d0ebc74902ae5
+    <section class="hero pricing-hero">
         <h1>Boostez vos compétences dès aujourd'hui</h1>
     </section>
 
@@ -154,7 +133,6 @@
 
     <footer>
         <div class="footer-content">
-<<<<<<< HEAD
             <div class="footer-section">
                 <div class="footer-logo">
                     <img src="TE.png" alt="Tech Exchange Logo">
@@ -196,40 +174,22 @@
         <div class="footer-bottom">
             <p>&copy; 2025 Tech Exchange - Tous droits réservés</p>
             <p class="credits"></p>
-=======
-            <div class="footer-logo">Tech Exchange</div>
-            <p>&copy; 2025 - Tous droits réservés</p>
-            <a href="mailto:techexchange50@gmail.com">techexchange50@gmail.com</a>
-            <p class="credits">Conçu par des étudiants de l'INPTIC Gabon</p>
->>>>>>> 706b666ceed133d39e706b12124d0ebc74902ae5
         </div>
     </footer>
 
     <script>
-<<<<<<< HEAD
         // Fonctionnalité de basculement du thème
         const themeToggle = document.getElementById('theme-toggle');
         const body = document.body;
 
         // Charger le thème sauvegardé
-=======
-        // Theme toggle functionality
-        const themeToggle = document.getElementById('theme-toggle');
-        const body = document.body;
-
-        // Load saved theme
->>>>>>> 706b666ceed133d39e706b12124d0ebc74902ae5
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme === 'light') {
             body.classList.add('light-mode');
             themeToggle.classList.add('active');
         }
 
-<<<<<<< HEAD
         // Basculer le thème
-=======
-        // Toggle theme
->>>>>>> 706b666ceed133d39e706b12124d0ebc74902ae5
         themeToggle.addEventListener('click', () => {
             body.classList.toggle('light-mode');
             themeToggle.classList.toggle('active');
@@ -237,11 +197,7 @@
             localStorage.setItem('theme', currentTheme);
         });
 
-<<<<<<< HEAD
         // Animation d'apparition progressive
-=======
-        // Fade-in animation
->>>>>>> 706b666ceed133d39e706b12124d0ebc74902ae5
         const sectionsToAnimate = document.querySelectorAll('.fade-in');
         if (sectionsToAnimate.length > 0) {
             const observer = new IntersectionObserver((entries) => {
@@ -253,7 +209,6 @@
             }, { threshold: 0.1 });
             sectionsToAnimate.forEach(section => observer.observe(section));
         }
-<<<<<<< HEAD
 
         // --- Mobile Menu Toggle ---
         const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
@@ -273,8 +228,6 @@
                 }
             });
         }
-=======
->>>>>>> 706b666ceed133d39e706b12124d0ebc74902ae5
     </script>
 </body>
 </html>

@@ -1,0 +1,1 @@
+les pages Faqs, Contact, Prix, Politique de confidentialite et mentions legales auront une image aussi en fond, differentes de celle de la homepage. je vais nnommer les images de facon representative pour te guider tel que golden black.jpg pour la page des Prix pour commencer 

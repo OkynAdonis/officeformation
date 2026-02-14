@@ -2,8 +2,12 @@
    Global & Homepage Styles
    ========================================================================== */
 
+* {
+    box-sizing: border-box;
+}
+
 :root {
-    --primary-color: #a88bff; /* Violet accent */
+    --primary-color: #FFD700; /* Gold accent */
     --background-color: #0D0D0D; /* Near black */
     --card-background: #1A1A1A; /* Dark gray for cards */
     --text-color: #F5F5F5; /* Off-white */
@@ -36,6 +40,7 @@ body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
 }
 
 header {
@@ -133,57 +138,16 @@ nav a:hover {
 }
 
 .cta-button:hover {
-    background-color: #beadff;
+    background-color: #EFBF04;
 }
 
 .hero {
     text-align: center;
     padding: 5rem 5%;
-<<<<<<< HEAD
-=======
-    background-image: url('wallpaper.jpg');
+    position: relative;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
-    position: relative;
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7); /* Overlay sombre pour le mode sombre */
-    z-index: 1;
-}
-
-body.light-mode .hero::before {
-    background-color: rgba(255, 255, 255, 0.8); /* Overlay clair pour le mode clair */
-}
-
-/* Arrière-plans spécifiques pour les pages */
-.hero-pricing {
-    background-image: url('goldenblack.jpg');
-}
-
-.hero-contact {
-    background-image: url('blackblue.jpg');
-}
-
-.hero-terms {
-    background-image: url('redblack.jpg');
-}
-
-.hero-faq {
-    background-image: url('faqs.jpg');
-}
-
-.hero h1, .hero p, .hero .cta-button {
-    position: relative;
-    z-index: 2;
->>>>>>> version-1.4
+    background-repeat: no-repeat;
 }
 
 .hero h1 {
@@ -203,6 +167,37 @@ body.light-mode .hero::before {
 .hero .cta-button {
     font-size: 1.25rem;
     padding: 1rem 2rem;
+}
+
+/* Hero spécifique pour l'accueil */
+.home-hero {
+    /* Image de fond avec un overlay sombre pour la subtilité */
+    background-image: linear-gradient(rgba(13, 13, 13, 0.85), rgba(13, 13, 13, 0.8)), url('home-bg.jpg');
+    padding: 8rem 5%; /* Plus d'espace pour un effet "grand écran" */
+}
+
+/* Hero spécifique pour la page Prix */
+.pricing-hero {
+    background-image: linear-gradient(rgba(13, 13, 13, 0.85), rgba(13, 13, 13, 0.8)), url('goldenblack.jpg');
+    padding: 6rem 5%;
+}
+
+/* Hero spécifique pour la page Contact */
+.contact-hero {
+    background-image: linear-gradient(rgba(13, 13, 13, 0.85), rgba(13, 13, 13, 0.8)), url('blackblue.jpg');
+    padding: 6rem 5%;
+}
+
+/* Hero spécifique pour la page FAQ */
+.faq-hero {
+    background-image: linear-gradient(rgba(13, 13, 13, 0.85), rgba(13, 13, 13, 0.8)), url('redblack.jpg');
+    padding: 6rem 5%;
+}
+
+/* Hero spécifique pour les pages légales */
+.legal-hero {
+    background-image: linear-gradient(rgba(13, 13, 13, 0.85), rgba(13, 13, 13, 0.8)), url('blackblue.jpg');
+    padding: 6rem 5%;
 }
 
 .features {
@@ -253,6 +248,14 @@ body.light-mode .hero::before {
 
 .card.powerpoint {
     border-top: 4px solid #D24726;
+}
+
+.card img {
+    width: 100%;
+    height: 180px; /* Hauteur fixe pour aligner toutes les cartes */
+    object-fit: cover; /* Recadre l'image proprement sans la déformer */
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .card h3 {
@@ -494,11 +497,12 @@ footer {
 /* Responsive */
 @media (max-width: 768px) {
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem; /* Réduit pour éviter les débordements sur mobile */
+        line-height: 1.2;
     }
 
     .hero p {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .features h2, .testimonials h2, .pricing h2, .card h3 {
@@ -520,8 +524,7 @@ footer {
     }
 
     header {
-        flex-direction: column;
-        text-align: center;
+        padding: 0.5rem 1rem;
     }
 
     .footer-content {
@@ -841,7 +844,7 @@ body.light-mode .faq-section::before {
 }
 
 .faq-question:hover {
-    background-color: rgba(168, 139, 255, 0.1);
+    background-color: rgba(255, 215, 0, 0.1);
 }
 
 .faq-icon {
@@ -937,7 +940,7 @@ body.light-mode .faq-section::before {
 }
 
 .contact-item a:hover {
-    color: #beadff;
+    color: #EFBF04;
 }
 
 .response-time {
@@ -981,7 +984,7 @@ body.light-mode .faq-section::before {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(168, 139, 255, 0.1);
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.1);
 }
 
 .form-group input.error,
@@ -1155,7 +1158,7 @@ body.light-mode .faq-section::before {
 }
 
 .search-container:focus-within {
-    box-shadow: 0 0 0 3px rgba(168, 139, 255, 0.1);
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.1);
 }
 
 .search-input {
@@ -1183,7 +1186,7 @@ body.light-mode .faq-section::before {
 }
 
 .search-button:hover {
-    background-color: rgba(168, 139, 255, 0.1);
+    background-color: rgba(255, 215, 0, 0.1);
 }
 
 .search-icon {
@@ -1221,17 +1224,18 @@ body.light-mode .faq-section::before {
 
     nav {
         position: fixed;
-        top: 100%;
-        left: 0;
+        top: 0;
+        left: -100%; /* Cache le menu sur le côté au lieu de l'opacité seule */
         width: 100%;
-        height: calc(100vh - 100px);
+        height: 100vh;
+        padding-top: 6rem; /* Espace pour ne pas être caché par le header */
         background-color: var(--card-background);
         border-top: 1px solid var(--border-color);
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 2rem;
-        transform: translateY(-100%);
+        transform: none;
         opacity: 0;
         visibility: hidden;
         transition: all 0.3s ease;
@@ -1239,7 +1243,7 @@ body.light-mode .faq-section::before {
     }
 
     nav.active {
-        transform: translateY(0);
+        left: 0;
         opacity: 1;
         visibility: visible;
     }
@@ -1254,7 +1258,7 @@ body.light-mode .faq-section::before {
     }
 
     nav a:hover {
-        background-color: rgba(168, 139, 255, 0.1);
+        background-color: rgba(255, 215, 0, 0.1);
     }
 
     .dropdown-content {
@@ -1272,11 +1276,45 @@ body.light-mode .faq-section::before {
     .dropdown-item {
         padding: 0.5rem 1rem;
         margin: 0.5rem 0;
-        background-color: rgba(168, 139, 255, 0.05);
+        background-color: rgba(255, 215, 0, 0.05);
         border-radius: 0.5rem;
     }
 
     .header-actions {
-        display: none;
+        display: flex; /* On garde les actions visibles */
+        position: absolute;
+        top: 1.5rem; /* Alignement vertical avec le menu burger */
+        right: 4rem; /* Place à gauche du menu burger */
+    }
+
+    .header-actions .cta-button {
+        display: none; /* On cache le gros bouton "Essayer" sur mobile pour gagner de la place */
+    }
+
+    .logo {
+        align-self: flex-start;
+    }
+
+    .mobile-menu-toggle {
+        position: absolute;
+        top: 1.5rem;
+        right: 1rem;
+        margin: 0;
+    }
+
+    /* Ajustement global des espacements pour mobile */
+    .hero, .home-hero, .pricing-hero, .contact-hero, .faq-hero, .legal-hero {
+        padding: 4rem 5%; /* Réduit l'espace vertical sur mobile */
+    }
+
+    .course-container {
+        padding: 1.5rem; /* Plus compact pour les pages de cours */
+        margin: 1rem auto;
+    }
+
+    /* Sécurité pour éviter le débordement horizontal des cartes */
+    .card, .pricing-card, .testimonial-card {
+        min-width: auto;
+        width: 100%;
     }
 }
